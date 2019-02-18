@@ -1,32 +1,41 @@
 <html>
-    <head>
-        <title>NewS</title>
-        <link rel="stylesheet" type="text/css" href="home.css"/>
-    </head>
-    <body>
-          <button id = "sign-in">Sign In </button>
-          <div class = "shadow">
-            <span class = "helper"></span>
-            <div>
-              <div class = "close-sign-in">x</div>
-              <p>Sign In</p>
-              <div>
-                <label for = "username">Username</label>
-                <input type = "text" id = "username" name = "username">
-              </div>
-              <div>
-                <label for = "password">Password</label>
-                <input type = "password" id = "password" name = "password" minlength = "8" required>
-              </div>
-              <input type="submit" value="Sign in">
-              <!--<a href = "feed.html">Sign In</a>-->
-            </div>
-          </div>
-        <div id = "new-acc">
-          <a href = "NewAcc.html">Create New Account</a>
-        </div>
-        <script src="jquery-3.3.1.js"></script>
+<head>
+  <title>News Literacy</title>
+  <link rel="stylesheet" type="text/css" href="home.css"/>
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+</head>
+<body>
+  <div id="header">
+    <!--header with title-->
+    <div class="topbar">
+      <div class="logo">
+        <a href="home.html"> <h1> News Literacy</h1> </a>
+      </div>
+    </div>
+  </div>
+  <div class="homescreen">
+    <h1 class="welcometext">Connecting People and World.</h1>
+    <button class="signin" onclick="document.getElementById('signIn').style.display='block'" style="width:auto;">Sign In</button>
+    <h3 class="newaccount">New User?
+      <a href="createaccount.html">Create An Account.</a>
+    </h3>
+  </div>
 
-        <script src = "home.js"></script>
-   </body>
+  <div id="signIn" class="box">
+    <form class="box-content" action="default.html">
+      <div class="topdisplay">
+        <span onclick="document.getElementById('signIn').style.display='none'" class="close" title="Close Box">&times;</span>
+        <br>
+        <h2 class="createaccount"> Create An Account </h2>
+      </div>
+      <div class="createaccount">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+        <button type="submit" class="login">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
 </html>
