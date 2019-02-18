@@ -1,3 +1,123 @@
+header{
+  background: black;
+  background-repeat: no-repeat;
+  font-family: sans-serif;
+}
+
+.topbar{
+  background-color:white;
+}
+.logo{
+  background-color: white;
+  color:#ee0290;
+  height:40px;
+  font-family: "Oswald";
+  font-size:18px;
+  padding: 10px;
+  vertical-align: center;
+  margin-left: 20px;
+}
+
+a{
+  text-decoration: none;
+}
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}
+
+body,html{
+  margin:0;
+  padding:0;
+}
+.homescreen{
+  margin:0px;
+  padding:0px;
+  height: 100%;
+  width: 100%;
+  background-color: #3d5afe;
+}
+
+.welcometext{
+  padding-top: 100px;
+  padding-bottom: 20px;
+  text-align: center;
+  color:white;
+  text-shadow: 2px;
+  font-size:70px;
+  font-style: normal;
+  font-family: "Oswald";
+  text-shadow: 2px 1px black;
+}
+
+#sign-in{
+  display:block;
+  margin: 0 auto;
+  width:100px;
+  height:50px;
+  text-align: center;
+  background-color:white;
+  font-family: "Oswald";
+  font-size: 16px;
+  outline:none;
+  border-radius: 15px;
+  color:black;
+}
+
+#sign-in:hover,#sign-in:active{
+  display:block;
+  margin: 0 auto;
+  width:100px;
+  height:50px;
+  text-align: center;
+  background-color:#ef4fa6;
+  border-color: none;
+  font-family: "Oswald";
+  outline:none;
+  border-radius: 15px;
+}
+
+.newaccount{
+  text-align: center;
+  color:white;
+  font-family: "Oswald";
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.topdisplay {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.createaccount {
+  padding: 16px;
+}
+
 /* Popup box BEGIN */
 .shadow{
     background:rgba(0,0,0,.4);
@@ -41,25 +161,104 @@
     width: 30px;
     height: 30px;
     text-align: center;
-}
-.close-sign-in:hover {
-    color: #ccc;
-}
-.sign-in {
-    cursor: pointer;
-    font-size: 20px;
-    margin: 20px;
-    display: inline-block;
-    font-weight: bold;
+  }
+  .close-sign-in:hover {
+      color: #ccc;
+  }
+  .sign-in {
+      cursor: pointer;
+      font-size: 20px;
+      margin: 20px;
+      display: inline-block;
+      font-weight: bold;
+  }
+
+  label {
+      display: block;
+      font: .9rem 'Fira Sans', sans-serif;
+  }
+
+  input[type='submit'],
+  label {
+      margin-top: 1rem;
+  }
+  /* Popup box ENDS*/
+
+/*
+span.password {
+  float: right;
+  padding-top: 16px;
 }
 
-label {
-    display: block;
-    font: .9rem 'Fira Sans', sans-serif;
+.box {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
 }
 
-input[type='submit'],
-label {
-    margin-top: 1rem;
+.box-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  width: 50%;
 }
-/* Popup box ENDS*/
+
+.close {
+  float:right;
+  padding:10px;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+.login{
+  display:block;
+  margin: 0 auto;
+  width:100px;
+  height:50px;
+  text-align: center;
+  background-color: white;
+  border-style: solid;
+  font-family: "Oswald";
+  font-size: 16px;
+  outline:none;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 15px;
+  color:black;
+}
+
+.login:hover,.signin:active{
+  display:block;
+  margin: 0 auto;
+  width:100px;
+  height:50px;
+  text-align: center;
+  background-color:#ef4fa6;
+  border-color: none;
+  font-family: "Oswald";
+  outline:none;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 50px) {
+  span.password {
+     display: block;
+     float: none;
+  }
+  */
+
+}

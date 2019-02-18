@@ -15,24 +15,28 @@
   </div>
   <div class="homescreen">
     <h1 class="welcometext">Connecting People and World.</h1>
-    <button id="sign-in">Sign In</button>
-    <div class = "shadow">
-      <span class = "helper"></span>
-            <div>
-              <div class = "close-sign-in">x</div>
-              <p>Sign In</p>
-              <div>
-                <label for = "username">Username</label>
-                <input type = "text" id = "username" name = "username">
-              </div>
-              <div>
-                <label for = "password">Password</label>
-                <input type = "password" id = "password" name = "password" minlength = "8" required>
-              </div>
-              <input type="submit" value="Sign in">
-              <!--<a href = "feed.html">Sign In</a>-->
-            </div>
-          </div>
+    <button id="sign-in"> Sign In </button>
+    <form action="default.html">
+    <div class="shadow">
+      <span class="helper"></span>
+      <div>
+        <div class="close-sign-in">x</div>
+        <p>Sign In</p>
+        <div>
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter Username" name="username" required>
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter Password" minlength="1" required>
+        </div>
+        <a href="default.html">
+          <button type="submit">Sign In</button>
+        </a>
+        <!--<a href = "feed.html">Sign In</a>-->
+      </div>
+    </div>
+  </form>
     <h3 class="newaccount">New User?
       <a href="createaccount.html">Create An Account.</a>
     </h3>
