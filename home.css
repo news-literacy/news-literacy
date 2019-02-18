@@ -49,7 +49,7 @@ body,html{
   text-shadow: 2px 1px black;
 }
 
-.signin{
+#sign-in{
   display:block;
   margin: 0 auto;
   width:100px;
@@ -63,7 +63,7 @@ body,html{
   color:black;
 }
 
-.signin:hover,.signin:active{
+#sign-in:hover,#sign-in:active{
   display:block;
   margin: 0 auto;
   width:100px;
@@ -118,6 +118,73 @@ button:hover {
   padding: 16px;
 }
 
+/* Popup box BEGIN */
+.shadow{
+    background:rgba(0,0,0,.4);
+    cursor:pointer;
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:10000;
+}
+.shadow .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+.shadow > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
+}
+.close-sign-in {
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+  }
+  .close-sign-in:hover {
+      color: #ccc;
+  }
+  .sign-in {
+      cursor: pointer;
+      font-size: 20px;
+      margin: 20px;
+      display: inline-block;
+      font-weight: bold;
+  }
+
+  label {
+      display: block;
+      font: .9rem 'Fira Sans', sans-serif;
+  }
+
+  input[type='submit'],
+  label {
+      margin-top: 1rem;
+  }
+  /* Popup box ENDS*/
+
+/*
 span.password {
   float: right;
   padding-top: 16px;
@@ -192,5 +259,6 @@ span.password {
      display: block;
      float: none;
   }
+  */
 
 }
