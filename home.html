@@ -1,31 +1,47 @@
-<html>
-    <head>
-        <title>NewS</title>
-        <link rel="stylesheet" type="text/css" href="home.css"/>
-    </head>
-    <body>
-          <button id= "sign-in">Sign In </button>
-          <div class= "shadow">
-            <span class= "helper"></span>
-            <div>
-              <div class= "close-sign-in">x</div>
-              <p>Sign In</p>
-              <div>
-                <label for= "username">Username</label>
-                <input type= "text" id = "username" name = "username">
-              </div>
-              <div>
-                <label for = "password">Password</label>
-                <input type = "password" id = "password" name = "password" minlength = "8" required>
-              </div>
-              <input type="submit" value="Sign in">
-            </div>
-          </div>
-        <div id = "new-acc">
-          <a href = "createaccount.html">Create New Account</a>
+<head>
+  <title>News Literacy</title>
+  <link rel="stylesheet" type="text/css" href="home.css"/>
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+</head>
+<body>
+  <div id="header">
+    <!--header with title-->
+    <div class="topbar">
+      <div class="logo">
+        <a href="home.html"> <h1> News Literacy</h1> </a>
+      </div>
+    </div>
+  </div>
+  <div class="homescreen">
+    <h1 class="welcometext">Connecting People and World.</h1>
+    <button id="sign-in"> Sign In </button>
+    <form action="default.html">
+    <div class="shadow">
+      <span class="helper"></span>
+      <div>
+        <div class="close-sign-in">x</div>
+        <p>Sign In</p>
+        <div>
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter Username" name="username" required>
         </div>
-        <script src="jquery-3.3.1.js"></script>
-        <script src = "home.hs"></script>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter Password" minlength="1" required>
+        </div>
+        <a href="default.html">
+          <button type="submit">Sign In</button>
+        </a>
+        <!--<a href = "feed.html">Sign In</a>-->
+      </div>
+    </div>
+  </form>
+    <h3 class="newaccount">New User?
+      <a href="createaccount.html">Create An Account.</a>
+    </h3>
+  </div>
+  <script src="jquery-3.3.1.js"></script>
+  <script src="home.js"></script>
 <!--
   <div id="signIn" class="box">
     <form class="box-content" action="default.html">
