@@ -88,15 +88,40 @@ body,html{
 }
 
 .article{
-  border: 2px solid black;
+  border: 2px solid #BBBFC9;
+  box-shadow: -2px 2px #80838a;
+  margin: 5px;
+  border-radius: 3px;
+  background-color: white;
 }
 
 .summary{
-  width:500px;
-  border: 2px solid black;
-
+  width:35%;
+  padding: 10px;
+  display: inline-block;
+  word-wrap: break-word;
+  vertical-align: top;
 }
 
-p{
-  padding: 25px;
+.br-title{
+  font-size: 25px;
+  color: #34a4b2;
+}
+
+.headlines{
+  width: 60%;
+  display:inline-block;
+  word-wrap: break-word;
+  margin:10px;
+  padding-left:8px;
+  border-left: 2px solid #80838a;
+}
+
+.headlines a{
+  text-decoration: underline;
+  color: #0d6bd6;
+}
+
+.headlines img{
+  width: 20%;
 }
