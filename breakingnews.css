@@ -1,0 +1,102 @@
+header{
+  background: black;
+  background-repeat: no-repeat;
+  font-family: sans-serif;
+}
+
+.topbar{
+  background-color:white;
+}
+.logo{
+  float:left;
+  background-color: white;
+  color:#ee0290;
+  height:40px;
+  font-family: "Oswald";
+  font-size:18px;
+  padding: 10px;
+  vertical-align: center;
+  margin-left: 20px;
+  width:300px;
+}
+
+.username{
+  background-color: white;
+  color:#ee0290;
+  height:40px;
+  font-family: "Oswald";
+  font-size:18px;
+  padding: 20px;
+  vertical-align: center;
+  margin-left: 20px;
+  float:right;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}
+
+body,html{
+  margin:0;
+  padding:0;
+}
+
+.switchfeeds{
+  padding: 25px;
+  padding-bottom: 50px;
+  display:block;
+  margin: 0 auto;
+  text-align: center;
+  width:500px;
+  font-family: "Merriweather";
+  font-size:18px;
+}
+
+.bn{
+  float: left;
+}
+
+.bn:hover, .bn.active{
+  border-bottom: 4px solid #ee0290;
+}
+
+.myfeed{
+  float:right;
+}
+
+.myfeed:hover{
+  border-bottom: 4px solid #ee0290;
+
+}
+
+.myfeed.active{
+  border-bottom: 4px solid #ee0290;
+}
+
+.article{
+  border: 2px solid black;
+}
+
+.summary{
+  width:500px;
+  border: 2px solid black;
+
+}
+
+p{
+  padding: 25px;
+}
