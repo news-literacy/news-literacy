@@ -1,0 +1,61 @@
+<html>
+<head>
+  <title>News Literacy</title>
+  <link rel="stylesheet" type="text/css" href="createaccount.css"/>
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div id="header">
+    <!--header with title-->
+    <div class="logo">
+      <a href="home.html"><h1> News Literacy</h1></a>
+    </div>
+    <!--Progres bar-->
+    <div class="registration">
+      <h2 id="content" class="step"> Content </h2>
+      <h2 id="sources" class="step"> Sources </h2>
+      <h2 id="display" class="step"> Display </h2>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="welcometext">
+    <h1> What do you want to read about? </h1>
+  </div>
+
+  <div class="homescreen">
+    <div class="select">
+      <button id="c0" class="content" onClick="changeColor(this.id)">
+        <div>
+          <img src="images/economy.png" alt="Economy">
+          Economy
+        </div>
+      </button>
+      <button id="c1" class="content" onclick="changeColor('c1')">
+        <img src="images/policy.png" alt="Economy">
+        Policy
+      </button>
+      <button id="c2" class="content" onclick="changeColor('c2')">
+        <img src="images/elections.png" alt="Economy">
+        Elections
+      </button>
+      <button id="c3" class="content" onclick="changeColor('c3')">
+        <img src="images/trending.png" alt="Economy">
+        Trending
+      </button>
+
+    </div>
+    <div class="next">
+      <a href="sources.html">
+        <button id="tosources" onclick="moveTab(this.id)">Next</button>
+      </a>
+    </div>
+  </div>
+  <script src="jquery-3.3.1.js"></script>
+  <script src="createaccount.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title>News Literacy</title>
+  <link rel="stylesheet" type="text/css" href="createaccount.css"/>
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div id="header">
+    <!--header with title-->
+    <div class="logo">
+      <a href="home.html"><h1> News Literacy</h1></a>
+    </div>
+    <!--Progres bar-->
+    <div class="registration">
+      <h2 id="content" class="step"> Content </h2>
+      <h2 id="sources" class="step"> Sources </h2>
+      <h2 id="display" class="step"> Display </h2>
+    </div>
+  </div>
+  <a href="sources.html">
+    <button class="back">Back</button>
+  </a>
+  <div class="welcometext">
+    <h1> What do you want to see first? </h1>
+  </div>
+
+  <div class="homescreen">
+    <div class="select">
+      <button id="s0" class="sources" onclick="changeColor(this.id)">
+        <img src="images/abc.png">
+        <p>ABC News</p>
+      </button>
+      <button id="s1" class="sources" onclick="changeColor(this.id)">
+        <img src="images/ap.png">
+        <p>Associated Press</p>
+      </button>
+    </div>
+    <div class="next">
+      <a href="default.html">
+        <button id="next" onclick="moveTab()">Next</button>
+      </a>
+    </div>
+  </div>
+  <script src="jquery-3.3.1.js"></script>
+  <script src="createaccount.js"></script>
+</body>
+</html>
+
+<!--
+
+
+
+
+-->

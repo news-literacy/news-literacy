@@ -3,61 +3,78 @@
   <link rel="stylesheet" type="text/css" href="home.css"/>
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
 </head>
+
 <body>
+  <!--header with title-->
   <div id="header">
-    <!--header with title-->
     <div class="topbar">
       <div class="logo">
         <a href="home.html"> <h1> News Literacy</h1> </a>
       </div>
     </div>
   </div>
+
+  <!--homescreen displays sign in button and create account link-->
   <div class="homescreen">
     <h1 class="welcometext">Connecting People and World.</h1>
     <button id="sign-in"> Sign In </button>
+    <!--Sign in form-->
     <form action="default.html">
-    <div class="shadow">
-      <span class="helper"></span>
-      <div>
-        <div class="close-sign-in">x</div>
-        <p>Sign In</p>
+      <!--Creates opaque background-->
+      <div class="shadow"><span class="helper"></span>
         <div>
-          <label for="username">Username</label>
-          <input type="text" id="username" placeholder="Enter Username" name="username" required>
+      <!--Close button-->
+          <div class="close-sign-in">x</div>
+          <p id=account>Welcome Back.</p>
+          <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter Username" name="username" required>
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password" minlength="1" required>
+          </div>
+          <a href="default.html">
+            <button type="submit">Sign In</button>
+          </a>
         </div>
-        <div>
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" placeholder="Enter Password" minlength="1" required>
-        </div>
-        <a href="default.html">
-          <button type="submit">Sign In</button>
-        </a>
-        <!--<a href = "feed.html">Sign In</a>-->
-      </div>
-    </div>
-  </form>
-    <h3 class="newaccount">New User?
-      <a href="createaccount.html">Create An Account.</a>
-    </h3>
-  </div>
-  <script src="jquery-3.3.1.js"></script>
-  <script src="home.js"></script>
-<!--
-  <div id="signIn" class="box">
-    <form class="box-content" action="default.html">
-      <div class="topdisplay">
-        <span onclick="document.getElementById('signIn').style.display='none'" class="close" title="Close Box">&times;</span>
-        <br>
-        <h2 class="createaccount"> Create An Account </h2>
-      </div>
-      <div class="createaccount">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
-        <label for="password"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
-        <button type="submit" class="login">Submit</button>
       </div>
     </form>
-  </div>-->
+
+    <!--Bottom link to create an account-->
+    <h3 class="newaccount">New User?>
+      <button id="create">Create An Account.</button>
+    </h3>
+
+    <form action="content.html">
+      <!--Creates opaque background-->
+      <div class="shadow1"><span class="helper1"></span>
+        <div>
+      <!--Close button-->
+          <div class="close-sign-in2">x</div>
+          <p id=account>Join News Literacy.</p>
+          <div>
+            <label for="username">Create Username</label>
+            <input type="text" id="username" placeholder="Create Username" name="username" required>
+          </div>
+          <div>
+            <label for="password">Create Password</label>
+            <input type="password" id="password" name="password" placeholder="Create Password" minlength="1" required>
+          </div>
+          <div>
+            <label for="password">Confirm Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password" minlength="1" required>
+          </div>
+          <a href="default.html">
+            <button id="tocontent" onclick="moveTab(this.id)" type="submit">Submit</button>
+          </a>
+        </div>
+      </div>
+    </form>
+
+  </div>
+  <!--Sign in functionality-->
+  <script src="jquery-3.3.1.js"></script>
+  <script src="home.js"></script>
 </body>
 </html>
