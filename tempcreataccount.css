@@ -1,0 +1,87 @@
+header{
+  background: black;
+  background-repeat: no-repeat;
+  font-family: sans-serif;
+}
+
+.topbar{
+  background-color:white;
+}
+.logo{
+  background-color: white;
+  color:#ee0290;
+  height:40px;
+  font-family: "Oswald";
+  font-size:18px;
+  padding: 10px;
+  vertical-align: center;
+  margin-left: 20px;
+  margin-bottom: 45px;
+}
+
+a{
+  text-decoration: none;
+}
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}
+
+body,html{
+  margin:0;
+  padding:0;
+}
+
+.registration {
+	float: center;
+	align-content: center;
+}
+
+.select {
+	left: 50%;
+	margin-right: -50%;
+}
+
+.content {
+	width: 300px;
+	height: 100px;
+	margin: 20px;
+	background-color: white;
+	border-color: #ee0290;
+	border-radius: 10px;
+	font-family: "Oswald";
+	font-size: 30px;
+}
+
+.content:active {
+	background-color: #ee0290;
+	border-color: #ee0290;
+}
+
+.step {
+	display: inline-block;
+	margin: 20px;
+	font-family: "Oswald";
+	font-size: 15px;
+}
+
+.next {
+	width: 100px;
+	height: 60px;
+	margin: 20px;
+	background-color: black;
+	color: #ee0290;
+	border-radius: 10px;
+	font-family: "Oswald";
+	font-size: 30px;
+}
+
+.next:active {
+	width: 100px;
+	height: 60px;
+	margin: 20px;
+	background-color: white;
+	color: #ee0290;
+	border-radius: 10px;
+	font-family: "Oswald";
+	font-size: 30px;
+}

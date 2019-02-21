@@ -23,4 +23,18 @@ $(document).ready(function() {
     $(".close-sign-in").click(function(){
         $(".shadow").hide();
     });
+
+    $("#create").click(function(){
+       $(".shadow1").show();
+    });
+
+    $(".shadow1").click(function(f){
+      if (f.target.className === "shadow1"){
+        $(".shadow1").hide();
+      }
+    })
+
+    $(".close-sign-in2").click(function(){
+        $(".shadow1").hide();
+    });
 });

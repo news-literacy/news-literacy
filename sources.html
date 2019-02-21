@@ -1,36 +1,88 @@
-<!DOCTYPE html>
 <html>
 <head>
-<title>Pick Source</title>
-<link rel="stylesheet" type="text/css" href="createaccount.css"/>
-<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+  <title>News Literacy</title>
+  <link rel="stylesheet" type="text/css" href="createaccount.css"/>
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
   <div id="header">
     <!--header with title-->
     <div class="logo">
       <a href="home.html"><h1> News Literacy</h1></a>
-      <div class="registration">
-        <div class="step"> <h2> Content &#62;</h2>   </div>
-        <div class="step"><h2>  <u>Sources</u> &#62;</h2>  </div>
-        <div class="step"> <h2> Display </h2> </div>
+    </div>
+    <!--Progres bar-->
+    <div class="registration">
+      <h2 id="content" class="step"> Content </h2>
+      <h2 id="sources" class="step"> Sources </h2>
+      <h2 id="display" class="step"> Display </h2>
     </div>
   </div>
-</div>
-    <div class="homescreen">
-      <div class="sourcebox">
-        <button class="sor" id="ABC" onclick="selector(this)"> <img height="100%" src="images/abc.jpg"></button>
-        <button class="sor"><img height="100%" src="images/AP.png"></button>
-        <button class="sor"><img height="100%" src="images/cnn.png"></button>
-        <button class="sor"><img height="100%" src="images/foxnews.png"></button>
-        <button class="sor"><img height="100%" src="images/NPR.jpg"></button>
-          <button class="sor"><img height="100%" src="images/NYT.jpg"></button>
-          <button class="sor"><img height="100%" src="images/Politico.png"></button>
-          <button class="sor"><img height="100%" src="images/Reuters.jpg"></button>
-          <button class="sor"><img height="100%" src="images/WP.png"></button>
-            <button class="sor"><img height="100%" src="images/WSJ.jpg"></button>
-      <button class="next">Next</button>
+  <a href="content.html">
+    <button class="back">Back</button>
+  </a>
+  <div class="welcometext">
+    <h1> What sources do you want to hear from? </h1>
+  </div>
+
+  <div class="homescreen">
+    <div class="select">
+      <button id="s0" class="sources" onclick="changeColor(this.id)">
+        <img src="images/abc.png">
+        <p>ABC News</p>
+      </button>
+      <button id="s1" class="sources" onclick="changeColor(this.id)">
+        <img src="images/ap.png">
+        <p>Associated Press</p>
+      </button>
+      <button id="s2" class="sources" onclick="changeColor(this.id)">
+        <img src="images/cnn.png">
+        <p>CNN</p>
+      </button>
+      <button id="s3" class="sources" onclick="changeColor(this.id)">
+        <img src="images/foxnews.png">
+        <p>Fox News</p>
+      </button>
+      <button id="s4" class="sources" onclick="changeColor(this.id)">
+        <img src="images/npr.png">
+        <p>NPR</p>
+      </button>
+      <button id="s5" class="sources" onclick="changeColor(this.id)">
+        <img src="images/nyt.png">
+        <p>New York Times</p>
+      </button>
+      <button id="s6" class="sources" onclick="changeColor(this.id)">
+        <img src="images/Politico.png">
+        <p>Politico</p>
+      </button>
+      <button id="s7" class="sources" onclick="changeColor(this.id)">
+        <img src="images/reuters.png">
+        <p>Reuters</p>
+      </button>
+      <button id="s8" class="sources" onclick="changeColor(this.id)">
+        <img src="images/WP.png">
+        <p>Washington Post</p>
+      </button>
+      <button id="s9" class="sources" onclick="changeColor(this.id)">
+        <img src="images/WSJ.jpg">
+        <p>Wall Street Journal</p>
+      </button>
+    </div>
+    <div class="next">
+      <button id="curate" onclick="changeColor(this.id)">Let us curate for you</button>
+      <a href="display.html">
+        <button id="todisplay" onclick="moveTab(this.id)">Next</button>
+      </a>
     </div>
   </div>
+  <script src="jquery-3.3.1.js"></script>
+  <script src="createaccount.js"></script>
 </body>
 </html>
+
+<!--
+
+
+
+
+-->
