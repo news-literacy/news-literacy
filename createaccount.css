@@ -95,6 +95,45 @@ button:hover {
   font-weight:300;
 }
 
+#d0{
+  outline:none;
+  background-color: #ee3366;
+  color: black;
+  border: 2px solid #ee3366;
+  padding: 1px 1px;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 400px;
+  height:300px;
+  margin:10px;
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight:300;
+}
+
+#d1{
+  outline:none;
+  background-color: white;
+  color: black;
+  border: 2px solid #ee3366;
+  padding: 1px 1px;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 400px;
+  height:300px;
+  margin:10px;
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight:300;
+}
+
+#d0 img, #d1 img{
+  width: 376px;
+  height: 282px;
+  border-radius: 25px;
+
+}
+
 
 .back{
   outline:none;
