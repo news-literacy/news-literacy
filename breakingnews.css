@@ -104,12 +104,13 @@ body,html{
 }
 
 .summary{
-  width:25%;
+  width: 25%;
   padding: 10px;
   display: inline-block;
   word-wrap: break-word;
   vertical-align: top;
 }
+
 .summary img{
   width: 100%;
 }
@@ -117,6 +118,7 @@ body,html{
 #pv2 p{
   width: 50%;
 }
+
 #pv2 img{
   width:45%;
   margin: 5px;
@@ -175,6 +177,7 @@ body,html{
   font-family: Arial;
   font-size: 20px;
 }
+
 .YTVid{
   display: inline-block;
   width: 23%;
@@ -184,3 +187,4 @@ body,html{
   padding-top:15px;
   border-top: 1px solid #e6e7eb;
 }
+
