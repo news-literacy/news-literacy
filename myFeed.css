@@ -68,7 +68,6 @@ body,html{
 
 .bn{
   float: left;
-  border-bottom: 4px solid #ee0290;
 }
 
 .bn:hover, .bn.active{
@@ -77,6 +76,7 @@ body,html{
 
 .myfeed{
   float:right;
+  border-bottom: 4px solid #ee0290;
 }
 
 .myfeed:hover{
@@ -88,74 +88,63 @@ body,html{
   border-bottom: 4px solid #ee0290;
 }
 
-.breakingnews{
+.newsFeed{
   display: inline-block;
-  width: 76%;
+  width: 75%;
   float: left;
   margin-top: 45px;
 }
 
-.article{
-  border-bottom: 1px solid #e6e7eb;
-  margin-top: 10px;
-  background-color: white;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.summary{
-  width: 25%;
-  padding: 10px;
-  display: inline-block;
-  word-wrap: break-word;
-  vertical-align: top;
-}
-
-.summary img{
-  width: 100%;
-}
-
-#pv2 p{
-  width: 50%;
-}
-
-#pv2 img{
-  width:45%;
-  margin: 5px;
-}
-
-.br-title{
-  font-size: 25px;
-  color: #34a4b2;
-  font-weight: bold;
-}
-
-.headlines{
-  width: 65%;
+.a-img{
+  width: 92%;
   display:inline-block;
   word-wrap: break-word;
-  margin:15px;
-  padding-left:12px;
-  border-left: 1px solid #e6e7eb;
+  margin:10px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  padding-left: 12px;
+  border-bottom: 1px solid #e6e7eb;
+}
+.a-img p{
+  width: 60%;
+  display: inline-block;
+  margin-top: 5px;
+}
+.a-img a{
+  text-decoration: underline;
+  color: #0d6bd6;
+  display: inline-block;
+  width:100%
+}
+.a-img img{
+  width:30%;
+  margin: 8px;
+  display: inline-block;
+  float: right;
+  padding-right: 8%;
 }
 
-.headlines a{
+.article{
+  width: 92%;
+  display:inline-block;
+  word-wrap: break-word;
+  margin:10px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  padding-left:12px;
+  border-bottom: 1px solid #e6e7eb;
+}
+
+.article a{
   text-decoration: underline;
   color: #0d6bd6;
   display: inline-block;
   width:100%
 }
 
-.headlines p{
+.article p{
   width: 68%;
   display: inline-block;
-  margin-top: 5px;
-}
-
-.headlines img{
-  width: 30%;
-  display: inline-block;
-  float: right;
   margin-top: 5px;
 }
 
@@ -170,21 +159,19 @@ body,html{
 
 #YT-title{
   display:inline-block;
-  width: 22%;
+  width: 23%;
   height: 25px;
   float: right;
   margin-right: 15px;
   font-family: Arial;
   font-size: 20px;
 }
-
 .YTVid{
   display: inline-block;
   width: 23%;
   float: right;
-  margin-right:5px;
+  margin-right:15px;
   margin-bottom: 15px;
   padding-top:15px;
   border-top: 1px solid #e6e7eb;
 }
-
