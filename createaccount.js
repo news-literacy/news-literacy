@@ -1,5 +1,10 @@
 var content = [false,false,false,false]
 var white = true;
+var clicked = true;
+/*var default = true;*/
+var myfeed = false;
+var d0 = true;
+var d1 = false;
 
 function changeColor(thing){
   if(white){
@@ -11,11 +16,50 @@ function changeColor(thing){
     white = true;
   }
 
-  if(document.getElementById(thing) == "curate"){
+  if(document.getElementById(thing) == curate && clicked){
     document.getElementById(thing).style.color = "black";
+    clicked = false;
+  }
+  else{
+    document.getElementById(thing).style.color = "#ee3366";
+    clicked = true;
   }
 }
 
+$("#d0").click(function(){
+  document.getElementById('d0').style.backgroundColor = "#ee3366";
+  document.getElementById('d1').style.backgroundColor = "white";
+  d0 = true;
+});
+$("#d1").click(function(){
+  document.getElementById('d1').style.backgroundColor = "#ee3366";
+  document.getElementById('d0').style.backgroundColor = "white";
+  d1 = true;
+});
+/*
+function changeColorD(thing){
+  if(white $$ default){
+    document.getElementById('d0').style.backgroundColor = "#ee3366";
+    document.getElementById('d1').style.backgroundColor = "#ee3366";
+    white = false;
+    default = false;
+    myfeed = true;
+  }
+  else{
+    document.getElementById(thing).style.backgroundColor = "white";
+    white = true;
+  }
+
+  if(document.getElementById(thing) == curate && clicked){
+    document.getElementById(thing).style.color = "black";
+    clicked = false;
+  }
+  else{
+    document.getElementById(thing).style.color = "#ee3366";
+    clicked = true;
+  }
+}
+*/
 $(window).on('load',function(){
   console.log(document.URL);
   var url = document.URL;
@@ -31,6 +75,14 @@ $(window).on('load',function(){
   }
 });
 
+$("#next").click(function(){
+  if(d0 == true){
+    window.location.href = "default.html";
+  }
+  else if(d1 == true){
+    window.location.href = "myFeed.html";
+  }
+});
 /*
 function moveTab(thing){
   if(thing == "tocontent"){
