@@ -44,8 +44,6 @@ a:visited {
   text-decoration: none;
 }
 
-
-
 a, a:visited, a:hover, a:active {
   color: inherit;
 }
@@ -96,66 +94,83 @@ body,html{
 }
 
 .article{
-  border-bottom: 1px solid #e6e7eb;
-  margin-top: 10px;
+  margin-right: 30px;
+  padding-top: 30px;
+  margin-left: 30px;
   background-color: white;
-  margin-left: 20px;
-  margin-right: 20px;
+  padding-bottom: 10px;
 }
 
-.summary{
-  width:25%;
-  padding: 10px;
+.floatbox{
+  border-top: 1px solid #34a4b2;
   display: inline-block;
-  word-wrap: break-word;
-  vertical-align: top;
-}
-.summary img{
-  width: 100%;
-}
-
-#pv2 p{
-  width: 50%;
-}
-#pv2 img{
-  width:45%;
-  margin: 5px;
 }
 
 .br-title{
-  font-size: 25px;
-  color: #34a4b2;
-  font-weight: bold;
+  width:100px;
+  text-align: left;
+  font-weight: 300;
+  font-size: 30px;
+  font-family: "Oswald";
+  color:#34a4b2;
+}
+
+.summary{
+  background-color: #34a4b2;
+  color: black;
+  font-weight: 300;
+  width:20%;
+  float:left;
+  padding:5px;
+  padding-right: 20px;
+  vertical-align: top;
+}
+
+.summary img{
+  width:30%;
+  height:10%
+}
+
+ul{
+  list-style-type: disc;
+  padding-left:0;
+  padding: 5px;
+  font-size: 18px;
+  color:white;
+}
+
+li{
+  margin-bottom: 20px;
+  margin-left: 20px;
 }
 
 .headlines{
-  width: 65%;
-  display:inline-block;
-  word-wrap: break-word;
-  margin:15px;
-  padding-left:12px;
-  border-left: 1px solid #e6e7eb;
+  padding:5px;
+  padding-left: 30px;
+  float:right;
+  margin:10px;
+  width:70%;
+}
+
+.headlines img{
+  width:30%;
+  height:15%;
+  margin-top:5px;
+}
+
+.headlines p{
+  margin-top: 10px;
 }
 
 .headlines a{
-  text-decoration: underline;
-  color: #0d6bd6;
+  color: black;
+  font-size: 20px;
+  font-weight: 100;
+  font-family: "Oswald";
   display: inline-block;
   width:100%
 }
 
-.headlines p{
-  width: 68%;
-  display: inline-block;
-  margin-top: 5px;
-}
-
-.headlines img{
-  width: 30%;
-  display: inline-block;
-  float: right;
-  margin-top: 5px;
-}
 
 .tweet-block{
   display: inline-block;

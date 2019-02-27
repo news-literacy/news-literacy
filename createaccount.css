@@ -48,6 +48,7 @@ body,html{
   font-family: "Oswald";
 }
 
+
 .homescreen{
   display: inline;
   text-align: center;
@@ -63,12 +64,15 @@ body,html{
 
 #content{
   border-bottom: none;
+  color: #34a4b2;
 }
 #sources{
   border-bottom: none;
+  color: #34a4b2;
 }
 #display{
   border-bottom: none;
+  color: #34a4b2;
 }
 /* Set a style for all buttons */
 .select button {
@@ -85,6 +89,16 @@ body,html{
   margin:10px;
 }
 
+.labels{
+  text-align: center;
+  display: inline-block;
+}
+
+.labels h3{
+  font-size: 20px;
+  font-weight: 600;
+}
+
 button:hover {
   opacity: 0.6;
 }
@@ -95,12 +109,14 @@ button:hover {
   font-weight:300;
 }
 
+
 #d0{
   outline:none;
   background-color: #ee3366;
   color: black;
   border: 2px solid #ee3366;
   padding: 1px 1px;
+  padding-top: 0;
   border-radius: 25px;
   cursor: pointer;
   width: 400px;
@@ -117,6 +133,7 @@ button:hover {
   color: black;
   border: 2px solid #ee3366;
   padding: 1px 1px;
+  padding-top:0;
   border-radius: 25px;
   cursor: pointer;
   width: 400px;
@@ -153,7 +170,7 @@ button:hover {
   padding-bottom: 0;
 }
 
-.next button{
+.next button, .go button{
   outline:none;
   background-color: white;
   color: #ee3366;
@@ -170,17 +187,38 @@ button:hover {
   margin-right:10px;
 }
 
-.next button:hover, .back:hover{
+.next button:hover, .back:hover, .go button:hover{
   color:white;
   background-color: #ee3366;
 }
 
-.next button:active, .back button:active{
+.next button:active, .back button:active, .go button:active{
   color:black;
   background-color:#ee3366;
+}
+
+.go{
+  padding-top: 50px;
+  text-align: center;
+}
+
+.go button{
+  display: inline-block;
+  margin:0 auto;
 }
 
 img{
   width: 80px;
   height: 80px;
+}
+
+.choose{
+  font-size: 72px;
+}
+
+.explain{
+  display: inline-block;
+  text-align: left;
+  width:75%;
+  color:#34a4b2;
 }
