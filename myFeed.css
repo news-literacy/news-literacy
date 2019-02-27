@@ -95,6 +95,36 @@ body,html{
   margin-top: 45px;
 }
 
+.a-vid{
+  width: 92%;
+  display:inline-block;
+  word-wrap: break-word;
+  margin:10px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  padding-left: 12px;
+  border-bottom: 1px solid #e6e7eb;
+}
+.a-vid a{
+  color: #34a4b2;
+  font-size: 20px;
+  font-weight: 100;
+  font-family: "Oswald";
+  display: inline-block;
+  width:100%
+}
+.a-vid p{
+  width: 30%;
+  display: inline-block;
+  margin-top: 5px;
+}
+.a-vid iframe{
+  margin: 8px;
+  display: inline-block;
+  float: left;
+  padding-right: 8%;
+}
+
 .a-img{
   width: 92%;
   display:inline-block;
@@ -107,6 +137,7 @@ body,html{
 }
 .a-img p{
   width: 60%;
+  display: inline-block;
   margin-top: 5px;
   float:left;
 }

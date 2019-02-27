@@ -212,6 +212,10 @@ img{
   height: 80px;
 }
 
+<<<<<<< HEAD
+#c0{
+  background-color: white;
+=======
 .choose{
   font-size: 72px;
 }
@@ -221,4 +225,5 @@ img{
   text-align: left;
   width:75%;
   color:#34a4b2;
+>>>>>>> master
 }
