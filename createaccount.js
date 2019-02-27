@@ -7,6 +7,7 @@ var myfeed = false;
 var d0 = true;
 var d1 = false;
 var cur = true;
+var allCon = true;
 
 $(window).on('load',function(){
   var url = document.URL;
@@ -52,6 +53,9 @@ $(document).ready(function(){  //change content colors, bool, local store
       if(document.getElementById("c0").style.backgroundColor == "white"){
            $("#c0").css("background-color", "#ee3366");
            ct = true;
+           if (allCon == true){
+             sContent(0);
+           }
          }
      else {
            $("#c0").css('background-color', 'white');
@@ -63,6 +67,9 @@ $(document).ready(function(){  //change content colors, bool, local store
       if(document.getElementById("c1").style.backgroundColor=='white'){
            $("#c1").css('background-color', '#ee3366');
            ct = true;
+           if (allCon == true){
+             sContent(1);
+           }
          }
      else {
            $("#c1").css('background-color', 'white');
@@ -74,6 +81,9 @@ $(document).ready(function(){  //change content colors, bool, local store
       if(document.getElementById("c2").style.backgroundColor=='white'){
            $("#c2").css('background-color', '#ee3366');
            ct = true;
+           if (allCon == true){
+             sContent(2);
+           }
          }
      else {
            $("#c2").css('background-color', 'white');
@@ -85,6 +95,9 @@ $(document).ready(function(){  //change content colors, bool, local store
       if(document.getElementById("c3").style.backgroundColor=='white'){
            $("#c3").css('background-color', '#ee3366');
            ct = true;
+           if (allCon == true){
+             sContent(3);
+           }
          }
      else {
            $("#c3").css('background-color', 'white');
@@ -92,11 +105,18 @@ $(document).ready(function(){  //change content colors, bool, local store
      }
       window.localStorage.setItem("c3", ct);
     });
+    $("#tosources").click(checkContent());
   }
 });
 
+function sContent(num){
+  for (var i = 0; i < 4; i++){
+    if (i != num)
+      window.localStorage.setItem("c"+i, false);
+  }
+}
 function checkContent(){
-  if (cnow[0] == null && cnow[1] == null && cnow[2] == null && cnow[3] == null){
+  if (cnow[0] != true && cnow[1] != true && cnow[2] != true && cnow[3] != true){
     for (var i = 0; i < 4; i++){
       window.localStorage.setItem('c'+i, true);
     }
@@ -106,7 +126,6 @@ function checkContent(){
 st = true;
 $(document).ready(function(){  //change content colors, bool, local store
   if(document.URL.includes('sources')){
-    checkContent();
     curateSources();
     $("#s0").click(function(){
       if(document.getElementById("s0").style.backgroundColor == "white"){
@@ -250,7 +269,7 @@ $(document).ready(function(){  //change content colors, bool, local store
     });
     $("#curate").click(function(){
       if(document.getElementById("curate").style.backgroundColor == 'white'){
-        $("#curate").css({'background-color':"#ee3366", 'color':'#white'});
+        $("#curate").css({'background-color':"#ee3366", 'color':'white'});
         curateSources();
       }
     });
@@ -281,7 +300,7 @@ $(document).ready(function(){
   for (var i = 0; i < 4; i++){
     cnow[i] = window.localStorage.getItem('c'+i);
     console.log("c " + cnow[i]);
-    if (!cnow[i]){
+    if (cnow[i] != "true"){
       $("." + cont[i]).hide();
     }
   }
@@ -289,7 +308,7 @@ $(document).ready(function(){
   for (var j = 0; j < 10; j++){
     snow[j] = window.localStorage.getItem('s' + j);
     console.log("s " + snow[j])
-    if (!snow[j]){
+    if (snow[j] != "true"){
       $("." + sces[j]).hide();
     }
   }
