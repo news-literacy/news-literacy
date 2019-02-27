@@ -137,19 +137,22 @@ body,html{
   width: 60%;
   display: inline-block;
   margin-top: 5px;
+  float:left;
 }
 .a-img a{
-  text-decoration: underline;
-  color: #0d6bd6;
+  color: #34a4b2;
+  font-size: 20px;
+  font-weight: 100;
+  font-family: "Oswald";
   display: inline-block;
   width:100%
 }
 .a-img img{
   width:30%;
-  margin: 8px;
-  display: inline-block;
-  float: right;
-  padding-right: 8%;
+  height:20%;
+  margin: 15px;
+  text-shadow: 1px 1px black;
+  float:right;
 }
 
 .article{
@@ -164,8 +167,10 @@ body,html{
 }
 
 .article a{
-  text-decoration: underline;
-  color: #0d6bd6;
+  color: #34a4b2;
+  font-size: 20px;
+  font-weight: 100;
+  font-family: "Oswald";
   display: inline-block;
   width:100%
 }
