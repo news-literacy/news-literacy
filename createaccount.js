@@ -6,6 +6,7 @@ var white = true;
 var myfeed = false;
 var d0 = true;
 var d1 = false;
+var cur = true;
 
 $(window).on('load',function(){
   var url = document.URL;
@@ -43,7 +44,7 @@ $("#next").click(function(){
   }
 });
 
-ct = false;
+ct = true;
 $(document).ready(function(){  //change content colors, bool, local store
   if(document.URL.includes('content')){
     window.localStorage.clear();
@@ -94,13 +95,26 @@ $(document).ready(function(){  //change content colors, bool, local store
   }
 });
 
-st = false;
+function checkContent(){
+  if (cnow[0] == null && cnow[1] == null && cnow[2] == null && cnow[3] == null){
+    for (var i = 0; i < 4; i++){
+      window.localStorage.setItem('c'+i, true);
+    }
+  }
+}
+
+st = true;
 $(document).ready(function(){  //change content colors, bool, local store
   if(document.URL.includes('sources')){
+    checkContent();
+    curateSources();
     $("#s0").click(function(){
       if(document.getElementById("s0").style.backgroundColor == "white"){
            $("#s0").css("background-color", "#ee3366");
            st = true;
+           if(cur == true){
+             deCurate(0);
+           }
          }
      else {
            $("#s0").css('background-color', 'white');
@@ -112,6 +126,9 @@ $(document).ready(function(){  //change content colors, bool, local store
       if(document.getElementById("s1").style.backgroundColor=='white'){
            $("#s1").css('background-color', '#ee3366');
            st = true;
+           if(cur == true){
+             deCurate(1);
+           }
          }
      else {
            $("#s1").css('background-color', 'white');
@@ -123,6 +140,9 @@ $(document).ready(function(){  //change content colors, bool, local store
       if(document.getElementById("s2").style.backgroundColor=='white'){
            $("#s2").css('background-color', '#ee3366');
            st = true;
+           if(cur == true){
+             deCurate(2);
+           }
          }
      else {
            $("#s2").css('background-color', 'white');
@@ -134,6 +154,9 @@ $(document).ready(function(){  //change content colors, bool, local store
       if(document.getElementById("s3").style.backgroundColor=='white'){
            $("#s3").css('background-color', '#ee3366');
            st = true;
+           if(cur == true){
+             deCurate(3);
+           }
          }
      else {
            $("#s3").css('background-color', 'white');
@@ -145,6 +168,9 @@ $(document).ready(function(){  //change content colors, bool, local store
       if(document.getElementById("s4").style.backgroundColor=='white'){
            $("#s4").css('background-color', '#ee3366');
            st = true;
+           if(cur == true){
+             deCurate(4);
+           }
          }
      else {
            $("#s4").css('background-color', 'white');
@@ -156,6 +182,9 @@ $(document).ready(function(){  //change content colors, bool, local store
       if(document.getElementById("s5").style.backgroundColor=='white'){
            $("#s5").css('background-color', '#ee3366');
            st = true;
+           if(cur == true){
+             deCurate(5);
+           }
          }
      else {
            $("#s5").css('background-color', 'white');
@@ -167,6 +196,9 @@ $(document).ready(function(){  //change content colors, bool, local store
       if(document.getElementById("s6").style.backgroundColor=='white'){
            $("#s6").css('background-color', '#ee3366');
            st = true;
+           if(cur == true){
+             deCurate(6);
+           }
          }
      else {
            $("#s6").css('background-color', 'white');
@@ -178,6 +210,9 @@ $(document).ready(function(){  //change content colors, bool, local store
       if(document.getElementById("s7").style.backgroundColor=='white'){
            $("#s7").css('background-color', '#ee3366');
            st = true;
+           if(cur == true){
+             deCurate(7);
+           }
          }
      else {
            $("#s7").css('background-color', 'white');
@@ -189,6 +224,9 @@ $(document).ready(function(){  //change content colors, bool, local store
       if(document.getElementById("s8").style.backgroundColor=='white'){
            $("#s8").css('background-color', '#ee3366');
            st = true;
+           if(cur == true){
+             deCurate(8);
+           }
          }
      else {
            $("#s8").css('background-color', 'white');
@@ -200,6 +238,9 @@ $(document).ready(function(){  //change content colors, bool, local store
       if(document.getElementById("s9").style.backgroundColor=='white'){
            $("#s9").css('background-color', '#ee3366');
            st = true;
+           if(cur == true){
+             deCurate(9);
+           }
          }
      else {
            $("#s9").css('background-color', 'white');
@@ -207,8 +248,32 @@ $(document).ready(function(){  //change content colors, bool, local store
      }
       window.localStorage.setItem("s9", st);
     });
+    $("#curate").click(function(){
+      if(document.getElementById("curate").style.backgroundColor == 'white'){
+        $("#curate").css({'background-color':"#ee3366", 'color':'#white'});
+        curateSources();
+      }
+    });
   }
 });
+
+function curateSources(){
+  for (var i = 0; i < 10; i++){
+    $("#s" + i).css('background-color', 'white');
+    window.localStorage.setItem("s" + i, true);
+  }
+  cur = true;
+}
+
+function deCurate(num){
+  $("#curate").css({'background-color':'white', 'color': '#ee3366'});
+  for (var i = 0; i < 10; i++){
+    if (i != num)
+      window.localStorage.setItem("s"+i, false);
+  }
+  cur = false;
+}
+
 
 var cnow = [];
 var snow = [];
