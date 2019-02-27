@@ -106,8 +106,10 @@ body,html{
   border-bottom: 1px solid #e6e7eb;
 }
 .a-vid a{
-  text-decoration: underline;
-  color: #0d6bd6;
+  color: #34a4b2;
+  font-size: 20px;
+  font-weight: 100;
+  font-family: "Oswald";
   display: inline-block;
   width:100%
 }
