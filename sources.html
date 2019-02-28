@@ -68,11 +68,15 @@
         <p>Wall Street Journal</p>
       </button>
     </div>
+
     <div class="next">
-      <button id="curate">Let us curate for you</button>
-      <a href="display.html">
-        <button id="todisplay" onclick="moveTab(this.id)">Next</button>
-      </a>
+      <div class="tooltip">
+        <button id="curate">Let us curate for you</button>
+        <a href="display.html">
+          <button id="todisplay" onclick="moveTab(this.id)">Next</button>
+        </a>
+        <span class="tooltiptext">We'll give you a mix of sources.</span>
+      </div>
     </div>
   </div>
   <script src="jquery-3.3.1.js"></script>
