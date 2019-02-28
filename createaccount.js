@@ -300,7 +300,7 @@ $(document).ready(function(){
   for (var i = 0; i < 4; i++){
     cnow[i] = window.localStorage.getItem('c'+i);
     console.log("c " + cnow[i]);
-    if (cnow[i] != "true"){
+    if (cnow[i] != 'true'){
       $("." + cont[i]).hide();
     }
   }
@@ -308,7 +308,7 @@ $(document).ready(function(){
   for (var j = 0; j < 10; j++){
     snow[j] = window.localStorage.getItem('s' + j);
     console.log("s " + snow[j])
-    if (snow[j] != "true"){
+    if (snow[j] != 'true'){
       $("." + sces[j]).hide();
     }
   }
