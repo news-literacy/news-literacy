@@ -49,6 +49,7 @@ body,html{
 }
 
 
+
 .homescreen{
   display: inline;
   text-align: center;
@@ -156,7 +157,6 @@ button:hover {
 
 }
 
-
 .back{
   outline:none;
   background-color: white;
@@ -227,7 +227,41 @@ img{
 
 .explain{
   display: inline-block;
-  text-align: left;
-  width:75%;
-  color:#34a4b2;
+  text-align: center;
+  width:62%;
+  color: #34a4b2;
+}
+
+.diamond{
+  border: 20px solid #ee3366;
+  border-radius:500px;
+  padding:25px;
+  margin:20px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  padding-right: 90px;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  display: inline;
+  float:left;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip button{
+  text-align: center;
 }
