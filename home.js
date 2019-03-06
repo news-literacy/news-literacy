@@ -1,4 +1,4 @@
-/*<<<<<<< HEAD
+/*
 var login = document.getElementById('signIn');
 
 // When the user clicks anywhere outside of the modal, close it
@@ -38,3 +38,8 @@ $(document).ready(function() {
         $(".shadow1").hide();
     });
 });
+
+function getUsername(){
+  var un = document.getElementById('NewUsername').value;
+  var nem = window.localStorage.setItem("username", un);
+}

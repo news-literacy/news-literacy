@@ -1,0 +1,267 @@
+a{
+  text-decoration: none;
+}
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}
+
+body,html{
+  margin:0;
+  padding:0;
+}
+
+#header{
+  background-color: white;
+}
+
+.logo{
+  background-color: white;
+  color:#ee3366;
+  font-family: "Oswald";
+  font-size:18px;
+  height:40px;
+  padding: 10px;
+  vertical-align: center;
+  margin-left: 20px;
+}
+
+.registration{
+  float:right;
+  padding-right: 100px;
+}
+
+.step{
+  display: inline-block;
+  font-size: 30px;
+  font-family:"Oswald";
+  color:black;
+  margin-right:20px;
+}
+
+.welcometext{
+  margin-top: 0px;
+  padding-bottom: 1px;
+  text-align: center;
+  color:black;
+  font-size:20px;
+  font-style: normal;
+  font-family: "Oswald";
+}
+
+
+
+.homescreen{
+  display: inline;
+  text-align: center;
+  width: 50%;
+}
+
+
+.select{
+  margin:auto;
+  text-align: center;
+  width:75%;
+}
+
+#content{
+  border-bottom: none;
+  color: #34a4b2;
+}
+#sources{
+  border-bottom: none;
+  color: #34a4b2;
+}
+
+#curate{
+  background-color: #ee3366;
+  color: white;
+}
+#display{
+  border-bottom: none;
+  color: #34a4b2;
+}
+/* Set a style for all buttons */
+.select button {
+  outline:none;
+  background-color: white;
+  color: black;
+  border: 2px solid #ee3366;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 160px;
+  height:160px;
+  margin:10px;
+}
+
+.labels{
+  text-align: center;
+  display: inline-block;
+}
+
+.labels h3{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+button:hover {
+  opacity: 0.6;
+}
+
+.content, .sources{
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight:300;
+}
+
+
+#d0{
+  outline:none;
+  background-color: #ee3366;
+  color: black;
+  border: 2px solid #ee3366;
+  padding: 1px 1px;
+  padding-top: 0;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 400px;
+  height:300px;
+  margin:10px;
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight:300;
+}
+
+#d1{
+  outline:none;
+  background-color: white;
+  color: black;
+  border: 2px solid #ee3366;
+  padding: 1px 1px;
+  padding-top:0;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 400px;
+  height:300px;
+  margin:10px;
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight:300;
+}
+
+#d0 img, #d1 img{
+  width: 376px;
+  height: 282px;
+  border-radius: 25px;
+
+}
+
+.back{
+  outline:none;
+  background-color: white;
+  color: #ee3366;
+  border: 1px solid #ee3366;
+  border-radius: 25px;
+  cursor: pointer;
+  width:150px;
+  height: 50px;
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight:300;
+  margin-left:70px;
+  margin-top:60px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.next button, .go button{
+  outline:none;
+  background-color: white;
+  color: #ee3366;
+  border: 1px solid #ee3366;
+  padding: 14px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top:30px;
+  width:200px;
+  height: 50px;
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight:300;
+  margin-right:10px;
+}
+
+.next button:hover, .back:hover, .go button:hover{
+  color:white;
+  background-color: #ee3366;
+}
+
+.next button:active, .back button:active, .go button:active{
+  color:black;
+  background-color:#ee3366;
+}
+
+.go{
+  padding-top: 50px;
+  text-align: center;
+}
+
+.go button{
+  display: inline-block;
+  margin:0 auto;
+}
+
+img{
+  width: 80px;
+  height: 80px;
+}
+
+#c0{
+  background-color: white;
+}
+
+.choose{
+  font-size: 72px;
+}
+
+.explain{
+  display: inline-block;
+  text-align: center;
+  width:62%;
+  color: #34a4b2;
+}
+
+.diamond{
+  border: 20px solid #ee3366;
+  border-radius:500px;
+  padding:25px;
+  margin:20px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  padding-right: 90px;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  display: inline;
+  float:left;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip button{
+  text-align: center;
+}
