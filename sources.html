@@ -1,7 +1,7 @@
 <html>
 <head>
   <title>News Literacy</title>
-  <link rel="stylesheet" type="text/css" href="createaccount.css"/>
+  <link rel="stylesheet" type="text/css" href="css/createaccount.css"/>
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -11,21 +11,27 @@
     <div class="logo">
       <a href="home.html"><h1> News Literacy</h1></a>
     </div>
-    <!--Progres bar-->
-    <div class="registration">
-      <h2 id="content" class="step"> Content </h2>
-      <h2 id="sources" class="step"> Sources </h2>
-      <h2 id="display" class="step"> Display </h2>
+
+    <!--Progress bar-->
+    <div class="container">
+      <ul class="progressbar">
+        <li class="active">create account</li>
+        <li class="active">choose content</li>
+        <li class="active">choose sources</li>
+        <li>choose display</li>
+      </ul>
     </div>
   </div>
-  <a href="content.html">
-    <button class="back">Back</button>
-  </a>
   <div class="welcometext">
     <h1> What sources do you want to hear from? </h1>
   </div>
 
   <div class="homescreen">
+    <div class="tooltip">
+      <button id="curate">Let us curate for you</button>
+      <span class="tooltiptext">We'll give you a mix of sources.</span>
+    </div>
+    <p> ----------- or ------------ </p>
     <div class="select">
       <button id="s0" class="sources">
         <img src="images/abc.png">
@@ -70,13 +76,12 @@
     </div>
 
     <div class="next">
-      <div class="tooltip">
-        <button id="curate">Let us curate for you</button>
-        <a href="display.html">
-          <button id="todisplay" onclick="moveTab(this.id)">Next</button>
-        </a>
-        <span class="tooltiptext">We'll give you a mix of sources.</span>
-      </div>
+      <a href="content.html">
+        <button class="back">Back</button>
+      </a>
+      <a href="display.html">
+        <button id="todisplay" onclick="moveTab(this.id)">Next</button>
+      </a>
     </div>
   </div>
   <script src="jquery-3.3.1.js"></script>

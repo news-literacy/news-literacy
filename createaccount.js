@@ -45,7 +45,8 @@ $("#next").click(function(){
   }
 });
 
-ct = true;
+var ct = true;
+
 $(document).ready(function(){  //change content colors, bool, local store
   if(document.URL.includes('content')){
     window.localStorage.clear();
@@ -53,7 +54,7 @@ $(document).ready(function(){  //change content colors, bool, local store
       if(document.getElementById("c0").style.backgroundColor == "white"){
            $("#c0").css("background-color", "#ee3366");
            ct = true;
-           if (allCon == true){
+           if (allCon){
              sContent(0);
            }
          }
@@ -67,7 +68,7 @@ $(document).ready(function(){  //change content colors, bool, local store
       if(document.getElementById("c1").style.backgroundColor=='white'){
            $("#c1").css('background-color', '#ee3366');
            ct = true;
-           if (allCon == true){
+           if (allCon){
              sContent(1);
            }
          }
@@ -81,7 +82,7 @@ $(document).ready(function(){  //change content colors, bool, local store
       if(document.getElementById("c2").style.backgroundColor=='white'){
            $("#c2").css('background-color', '#ee3366');
            ct = true;
-           if (allCon == true){
+           if (allCon){
              sContent(2);
            }
          }
@@ -95,7 +96,7 @@ $(document).ready(function(){  //change content colors, bool, local store
       if(document.getElementById("c3").style.backgroundColor=='white'){
            $("#c3").css('background-color', '#ee3366');
            ct = true;
-           if (allCon == true){
+           if (allCon){
              sContent(3);
            }
          }
@@ -123,7 +124,7 @@ function checkContent(){
   }
 }
 
-st = true;
+var st = true;
 $(document).ready(function(){  //change content colors, bool, local store
   if(document.URL.includes('sources')){
     curateSources();
