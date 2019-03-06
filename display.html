@@ -1,7 +1,7 @@
 <html>
 <head>
   <title>News Literacy</title>
-  <link rel="stylesheet" type="text/css" href="createaccount.css"/>
+  <link rel="stylesheet" type="text/css" href="css/createaccount.css"/>
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -16,11 +16,16 @@
       <h2 id="content" class="step"> Content </h2>
       <h2 id="sources" class="step"> Sources </h2>
       <h2 id="display" class="step"> Display </h2>
+    <div class="container">
+      <ul class="progressbar">
+        <li class="active">create account</li>
+        <li class="active">choose content</li>
+        <li class="active">choose sources</li>
+        <li class="active">choose display</li>
+      </ul>
     </div>
   </div>
-  <a href="sources.html">
-    <button class="back">Back</button>
-  </a>
+
   <div class="welcometext">
     <h1> What do you want to see first? </h1>
   </div>
@@ -40,7 +45,11 @@
         </button>
       </div>
     </div>
+
     <div class="next">
+      <a href="sources.html">
+        <button class="back">Back</button>
+      </a>
       <button id="next">Next</button>
     </div>
   </div>

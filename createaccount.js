@@ -171,7 +171,7 @@ function checkContent(){
   }
 }
 
-st = true;
+var st = true;
 $(document).ready(function(){  //change content colors, bool, local store
   if(document.URL.includes('sources')){
     fillSources();

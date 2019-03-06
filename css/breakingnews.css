@@ -20,17 +20,7 @@
   width:25%;
 }
 
-.username{
-  background-color: none;
-  color:#ee0290;
-  height:40px;
-  font-family: "Oswald";
-  font-size:18px;
-  padding: 20px;
-  vertical-align: right;
-  margin-right: 10px;
-  float:right;
-}
+
 
 a{
   text-decoration: none;
@@ -44,10 +34,16 @@ a:visited {
   text-decoration: none;
 }
 
-
-
 a, a:visited, a:hover, a:active {
   color: inherit;
+}
+
+.article a{
+  color: #34a4b2;
+}
+
+.article a:hover{
+  color: black;
 }
 
 body,html{
@@ -121,7 +117,7 @@ body,html{
   background-color: #34a4b2;
   color: black;
   font-weight: 300;
-  width:20%;
+  width:25%;
   float:left;
   padding:5px;
   padding-right: 20px;
@@ -151,7 +147,7 @@ li{
   padding-left: 30px;
   float:right;
   margin:10px;
-  width:70%;
+  width:65%;
 }
 
 .headlines img{
@@ -166,13 +162,21 @@ li{
 
 .headlines a{
   color: black;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 100;
   font-family: "Oswald";
   display: inline-block;
   width:100%
 }
 
+.headlines a:hover{
+  color: #34a4b2;
+  font-size: 22px;
+  font-weight: 100;
+  font-family: "Oswald";
+  display: inline-block;
+  width:100%
+}
 
 .tweet-block{
   display: inline-block;
@@ -200,4 +204,76 @@ li{
   margin-bottom: 15px;
   padding-top:15px;
   border-top: 1px solid #e6e7eb;
+}
+
+.userdrop{
+  overflow: hidden;
+  background-color: none;
+  color:#ee3366;
+  height:40px;
+  font-family: "Oswald";
+  font-size:20px;
+  padding: 20px;
+  vertical-align: right;
+  margin-right: 10px;
+  float:right;
+}
+
+.userdrop a{
+  float: right;
+  text-decoration: none;
+  color: #ee3366;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: #ee3366;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: white;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }

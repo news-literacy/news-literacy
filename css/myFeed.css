@@ -84,7 +84,7 @@ body,html{
 
 }
 
-.myfeed.active{
+.myfeed:active{
   border-bottom: 4px solid #ee0290;
 }
 
@@ -93,6 +93,23 @@ body,html{
   width: 75%;
   float: left;
   margin-top: 45px;
+}
+
+.newsFeeds{
+  width: 75%;
+  margin: auto;
+  float: center;
+  margin-top: 45px;
+}
+
+
+.a-vid a, .a-img a, .article a{
+  font-size: 24px;
+}
+
+.a-vid a:hover, .a-img a:hover, .article a:hover{
+  font-size: 24px;
+  color:black;
 }
 
 .a-vid{
@@ -107,7 +124,6 @@ body,html{
 }
 .a-vid a{
   color: #34a4b2;
-  font-size: 22px;
   font-weight: 100;
   font-family: "Oswald";
   display: inline-block;
@@ -122,7 +138,7 @@ body,html{
 .a-vid iframe{
   display: inline-block;
   text-shadow: 1px 1px black;
-  float:left;
+  float:right;
   margin: 10px;
   width:40%;
   height:40%;
@@ -146,7 +162,6 @@ body,html{
 }
 .a-img a{
   color: #34a4b2;
-  font-size: 22px;
   font-weight: 100;
   font-family: "Oswald";
   display: inline-block;
@@ -173,7 +188,6 @@ body,html{
 
 .article a{
   color: #34a4b2;
-  font-size: 22px;
   font-weight: 100;
   font-family: "Oswald";
   display: inline-block;
@@ -220,24 +234,166 @@ body,html{
 }
 
 #economy, #policy, #elections, #trending{
-  font-size:16px;
+  font-size:12px;
   font-family:"Arial";
   font-style: sans-serif;
   padding:5px;
+  margin-bottom:5px;
 }
 
 #economy{
   color: darkgreen;
+  background-color: white;
+  border: 2px solid darkgreen;
+  border-radius: 25px;
+  width: 90px;
+  text-align: center;
+}
+
+#economy:hover{
+  color:white;
+  background-color:darkgreen;
 }
 
 #policy{
   color: darkorange;
+  background-color: white;
+  border: 2px solid darkorange;
+  border-radius: 25px;
+  width: 80px;
+  text-align: center;
+}
+
+#policy:hover{
+  color:white;
+  background-color:darkorange;
 }
 
 #elections{
   color: darkred;
+  background-color: white;
+  border: 2px solid darkred;
+  border-radius: 25px;
+  width: 100px;
+  text-align: center;
+}
+
+#elections:hover{
+  color:white;
+  background-color:darkred;
 }
 
 #trending{
   color: darkblue;
+  background-color: white;
+  border: 2px solid darkblue;
+  border-radius: 25px;
+  width: 100px;
+  text-align: center;
+}
+
+#trending:hover{
+  color:white;
+  background-color:darkblue;
+}
+
+.titled{
+  text-align: center;
+}
+
+.save{
+  margin-top: 100px;
+  text-align: center;
+}
+
+.bm{
+  float:right;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 25px;
+}
+
+.bm:focus{
+  text-decoration: none;
+  outline: none;
+}
+
+.bm:active{
+  background-color: #ee0290;
+}
+
+.bm:hover{
+  background-color: #ee0290;
+}
+
+.userdrop{
+  overflow: hidden;
+  background-color: none;
+  color:#ee3366;
+  height:40px;
+  font-family: "Oswald";
+  font-size:20px;
+  padding: 20px;
+  vertical-align: right;
+  margin-right: 10px;
+  float:right;
+}
+
+.userdrop a{
+  float: right;
+  text-decoration: none;
+  color: #ee3366;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: #ee3366;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: white;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
