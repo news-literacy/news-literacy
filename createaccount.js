@@ -1,4 +1,4 @@
-var content = [false, false, false, false];
+var content = [0,0,0,0];
 var cont = ["economy", "policy", "elections", "trending"];
 var sources = [false,false,false,false,false,false,false,false,false,false];
 var sces = ["abc", "ap", "cnn", "fox", "npr", "nyt", "pol", "reu", "wp", "wsj"];
@@ -7,7 +7,27 @@ var myfeed = false;
 var d0 = true;
 var d1 = false;
 var cur = true;
-var allCon = true;
+var allCon = false;
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function dropdown() {
+  document.getElementById("drop").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
 
 $(window).on('load',function(){
   var url = document.URL;
@@ -45,90 +65,123 @@ $("#next").click(function(){
   }
 });
 
-ct = true;
+$(document).ready(function(){
+  if(document.URL.includes('setup')){
+    window.localStorage.clear();
+  }
+});
+
+
 $(document).ready(function(){  //change content colors, bool, local store
   if(document.URL.includes('content')){
-    window.localStorage.clear();
+    fillContent(); //set all content to true/false
+    checkContent();
+    console.log(allCon);
     $("#c0").click(function(){
-      if(document.getElementById("c0").style.backgroundColor == "white"){
+      if(content[0] == 0){
            $("#c0").css("background-color", "#ee3366");
-           ct = true;
+           content[0] = 1;
+           window.localStorage.setItem("c0", 1);
            if (allCon == true){
              sContent(0);
            }
          }
-     else {
+     else{
            $("#c0").css('background-color', 'white');
-           ct = false;
-     }
-      window.localStorage.setItem("c0", ct);
+           content[0] = 0;
+           window.localStorage.setItem("c0", 0);
+         }
     });
     $("#c1").click(function(){
-      if(document.getElementById("c1").style.backgroundColor=='white'){
+      if(content[1] == 0){
            $("#c1").css('background-color', '#ee3366');
-           ct = true;
+           content[1] = 1;
+           window.localStorage.setItem("c1", 1);
            if (allCon == true){
              sContent(1);
            }
          }
-     else {
+     else{
            $("#c1").css('background-color', 'white');
-           ct = false;
+           content[1] = 0;
+           window.localStorage.setItem("c1", 0);
      }
-      window.localStorage.setItem("c1", ct);
     });
     $("#c2").click(function(){
-      if(document.getElementById("c2").style.backgroundColor=='white'){
+      if(content[2] == 0){
            $("#c2").css('background-color', '#ee3366');
-           ct = true;
+           content[2] = 1;
+           window.localStorage.setItem("c2", 1);
            if (allCon == true){
              sContent(2);
            }
          }
      else {
            $("#c2").css('background-color', 'white');
-           ct = false;
+           content[2] = 0;
+           window.localStorage.setItem("c2", 0);
      }
-      window.localStorage.setItem("c2", ct);
     });
     $("#c3").click(function(){
-      if(document.getElementById("c3").style.backgroundColor=='white'){
+      if(content[3] == 0){
            $("#c3").css('background-color', '#ee3366');
-           ct = true;
+           content[3] = 1;
+           window.localStorage.setItem("c3", 1);
            if (allCon == true){
              sContent(3);
            }
          }
      else {
            $("#c3").css('background-color', 'white');
-           ct = false;
+           content[3] = 0;
+           window.localStorage.setItem("c3", 0);
      }
-      window.localStorage.setItem("c3", ct);
     });
     $("#tosources").click(checkContent());
   }
 });
 
+var cc;
+function fillContent(){
+  for (var i = 0; i < 4; i++){
+    cc = window.localStorage.getItem('c'+i);
+    if (cc == 1){
+      $("#c" + i).css('background-color', '#ee3366');
+      content[i] = 1;
+    }
+    else{
+      content[i] = 0;
+    }
+  }
+}
+
 function sContent(num){
   for (var i = 0; i < 4; i++){
     if (i != num)
-      window.localStorage.setItem("c"+i, false);
+      window.localStorage.setItem("c"+i, 0);
   }
+  allCon = false;
 }
 function checkContent(){
-  if (cnow[0] != true && cnow[1] != true && cnow[2] != true && cnow[3] != true){
+  if (cnow[0] == 0 && cnow[1] == 0 && cnow[2] == 0 && cnow[3] == 0){
     for (var i = 0; i < 4; i++){
-      window.localStorage.setItem('c'+i, true);
+      window.localStorage.setItem('c'+i, 1);
     }
+    allCon = true;
   }
 }
 
 st = true;
 $(document).ready(function(){  //change content colors, bool, local store
   if(document.URL.includes('sources')){
-    curateSources();
+    fillSources();
+    checkSources();
+    console.log(cur);
+    if (cur == true){
+      curateSources();
+    }
     $("#s0").click(function(){
-      if(document.getElementById("s0").style.backgroundColor == "white"){
+      if(document.getElementById('s0').style.backgroundColor == 'white'){
            $("#s0").css("background-color", "#ee3366");
            st = true;
            if(cur == true){
@@ -142,7 +195,7 @@ $(document).ready(function(){  //change content colors, bool, local store
       window.localStorage.setItem("s0", st);
     });
     $("#s1").click(function(){
-      if(document.getElementById("s1").style.backgroundColor=='white'){
+      if(document.getElementById('s1').style.backgroundColor == 'white'){
            $("#s1").css('background-color', '#ee3366');
            st = true;
            if(cur == true){
@@ -156,7 +209,7 @@ $(document).ready(function(){  //change content colors, bool, local store
       window.localStorage.setItem("s1", st);
     });
     $("#s2").click(function(){
-      if(document.getElementById("s2").style.backgroundColor=='white'){
+      if(document.getElementById('s2').style.backgroundColor == 'white'){
            $("#s2").css('background-color', '#ee3366');
            st = true;
            if(cur == true){
@@ -170,7 +223,7 @@ $(document).ready(function(){  //change content colors, bool, local store
       window.localStorage.setItem("s2", st);
     });
     $("#s3").click(function(){
-      if(document.getElementById("s3").style.backgroundColor=='white'){
+      if(document.getElementById('s3').style.backgroundColor == 'white'){
            $("#s3").css('background-color', '#ee3366');
            st = true;
            if(cur == true){
@@ -184,7 +237,7 @@ $(document).ready(function(){  //change content colors, bool, local store
       window.localStorage.setItem("s3", st);
     });
     $("#s4").click(function(){
-      if(document.getElementById("s4").style.backgroundColor=='white'){
+      if(document.getElementById('s4').style.backgroundColor == 'white'){
            $("#s4").css('background-color', '#ee3366');
            st = true;
            if(cur == true){
@@ -198,7 +251,7 @@ $(document).ready(function(){  //change content colors, bool, local store
       window.localStorage.setItem("s4", st);
     });
     $("#s5").click(function(){
-      if(document.getElementById("s5").style.backgroundColor=='white'){
+      if(document.getElementById('s5').style.backgroundColor == 'white'){
            $("#s5").css('background-color', '#ee3366');
            st = true;
            if(cur == true){
@@ -212,7 +265,7 @@ $(document).ready(function(){  //change content colors, bool, local store
       window.localStorage.setItem("s5", st);
     });
     $("#s6").click(function(){
-      if(document.getElementById("s6").style.backgroundColor=='white'){
+      if(document.getElementById('s6').style.backgroundColor == 'white'){
            $("#s6").css('background-color', '#ee3366');
            st = true;
            if(cur == true){
@@ -226,7 +279,7 @@ $(document).ready(function(){  //change content colors, bool, local store
       window.localStorage.setItem("s6", st);
     });
     $("#s7").click(function(){
-      if(document.getElementById("s7").style.backgroundColor=='white'){
+      if(document.getElementById('s7').style.backgroundColor == 'white'){
            $("#s7").css('background-color', '#ee3366');
            st = true;
            if(cur == true){
@@ -240,7 +293,7 @@ $(document).ready(function(){  //change content colors, bool, local store
       window.localStorage.setItem("s7", st);
     });
     $("#s8").click(function(){
-      if(document.getElementById("s8").style.backgroundColor=='white'){
+      if(document.getElementById('s8').style.backgroundColor == 'white'){
            $("#s8").css('background-color', '#ee3366');
            st = true;
            if(cur == true){
@@ -254,7 +307,7 @@ $(document).ready(function(){  //change content colors, bool, local store
       window.localStorage.setItem("s8", st);
     });
     $("#s9").click(function(){
-      if(document.getElementById("s9").style.backgroundColor=='white'){
+      if(document.getElementById('s9').style.backgroundColor == 'white'){
            $("#s9").css('background-color', '#ee3366');
            st = true;
            if(cur == true){
@@ -276,10 +329,43 @@ $(document).ready(function(){  //change content colors, bool, local store
   }
 });
 
+var scount = 0;
+function fillSources(){
+  for (var i = 0; i < 10; i++){
+    var ss = window.localStorage.getItem('s'+i);
+    if (ss == 'true' || ss == true){
+      $("#s" + i).css('background-color', '#ee3366');
+      $('#curate').css({'background-color':'white', 'color': '#ee3366'});
+      sources[i] = true;
+      scount++;
+    }
+    else{
+      $("#s" + i).css('background-color', 'white');
+      sources[i] = false;
+    }
+  }
+  if (scount == 10){
+    curateSources();
+  }
+  else{
+    cur = false;
+  }
+}
+
+
+function checkSources(){
+  for (var i = 0; i < 10; i++){
+    if (snow[i] == 'false'){
+      cur = false;
+    }
+  }
+}
+
 function curateSources(){
   for (var i = 0; i < 10; i++){
     $("#s" + i).css('background-color', 'white');
     window.localStorage.setItem("s" + i, true);
+    $("#curate").css({'background-color':"#ee3366", 'color':'white'});
   }
   cur = true;
 }
@@ -288,7 +374,7 @@ function deCurate(num){
   $("#curate").css({'background-color':'white', 'color': '#ee3366'});
   for (var i = 0; i < 10; i++){
     if (i != num)
-      window.localStorage.setItem("s"+i, false);
+      window.localStorage.setItem("s" + i, false);
   }
   cur = false;
 }
@@ -300,7 +386,7 @@ $(document).ready(function(){
   for (var i = 0; i < 4; i++){
     cnow[i] = window.localStorage.getItem('c'+i);
     console.log("c " + cnow[i]);
-    if (cnow[i] != 'true'){
+    if (cnow[i] == 0){
       $("." + cont[i]).hide();
     }
   }
@@ -312,4 +398,8 @@ $(document).ready(function(){
       $("." + sces[j]).hide();
     }
   }
+});
+
+$(document).ready(function(){
+  $(".username").html(window.localStorage.getItem("username"));
 });
