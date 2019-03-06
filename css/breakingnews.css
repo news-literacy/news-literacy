@@ -44,10 +44,16 @@ a:visited {
   text-decoration: none;
 }
 
-
-
 a, a:visited, a:hover, a:active {
   color: inherit;
+}
+
+.article a{
+  color: #34a4b2;
+}
+
+.article a:hover{
+  color: black;
 }
 
 body,html{
@@ -121,7 +127,7 @@ body,html{
   background-color: #34a4b2;
   color: black;
   font-weight: 300;
-  width:20%;
+  width:25%;
   float:left;
   padding:5px;
   padding-right: 20px;
@@ -151,7 +157,7 @@ li{
   padding-left: 30px;
   float:right;
   margin:10px;
-  width:70%;
+  width:65%;
 }
 
 .headlines img{
@@ -166,13 +172,21 @@ li{
 
 .headlines a{
   color: black;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 100;
   font-family: "Oswald";
   display: inline-block;
   width:100%
 }
 
+.headlines a:hover{
+  color: #34a4b2;
+  font-size: 22px;
+  font-weight: 100;
+  font-family: "Oswald";
+  display: inline-block;
+  width:100%
+}
 
 .tweet-block{
   display: inline-block;

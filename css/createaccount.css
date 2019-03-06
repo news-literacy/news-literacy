@@ -43,19 +43,16 @@ body,html{
   padding-bottom: 1px;
   text-align: center;
   color:black;
-  font-size:20px;
+  font-size:24px;
   font-style: normal;
   font-family: "Oswald";
 }
 
-
-
 .homescreen{
-  display: inline;
+  display: inline-block;
   text-align: center;
-  width: 50%;
+  width: 100%;
 }
-
 
 .select{
   margin:auto;
@@ -91,7 +88,7 @@ body,html{
   border-radius: 25px;
   cursor: pointer;
   width: 160px;
-  height:160px;
+  height:140px;
   margin:10px;
 }
 
@@ -169,27 +166,24 @@ button:hover {
   font-family: "Oswald";
   font-size: 16px;
   font-weight:300;
-  margin-left:70px;
-  margin-top:60px;
   margin-bottom: 0;
   padding-bottom: 0;
+  margin:10px;
 }
 
 .next button, .go button{
+  margin:10px;
   outline:none;
   background-color: white;
   color: #ee3366;
   border: 1px solid #ee3366;
-  padding: 14px 20px;
   border-radius: 25px;
   cursor: pointer;
-  margin-top:30px;
   width:200px;
   height: 50px;
   font-family: "Oswald";
   font-size: 16px;
   font-weight:300;
-  margin-right:10px;
 }
 
 .next button:hover, .back:hover, .go button:hover{
@@ -213,8 +207,8 @@ button:hover {
 }
 
 img{
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
 }
 
 #c0{
@@ -222,13 +216,15 @@ img{
 }
 
 .choose{
+  margin-top:50px;
   font-size: 72px;
 }
 
 .explain{
+  margin:5px;
   display: inline-block;
   text-align: center;
-  width:62%;
+  width:75%;
   color: #34a4b2;
 }
 
@@ -240,6 +236,7 @@ img{
 }
 
 .tooltip {
+  text-align: center;
   position: relative;
   display: inline-block;
   padding-right: 90px;
@@ -264,4 +261,73 @@ img{
 
 .tooltip button{
   text-align: center;
+  color:white;
+  background-color: #ee3366;
+  outline:none;
+  background-color: white;
+  color: #ee3366;
+  border: 1px solid #ee3366;
+  border-radius: 25px;
+  cursor: pointer;
+  width:200px;
+  height: 50px;
+  font-family: "Oswald";
+  font-size: 16px;
+  font-weight:300;
 }
+
+.container {
+    width: 600px;
+    margin: 25px auto;
+    margin-bottom: 100px;
+    text-align: center;
+  }
+.progressbar {
+      counter-reset: step;
+      text-align: center;
+  }
+  .progressbar li {
+      list-style-type: none;
+      width: 25%;
+      float: left;
+      font-size: 12px;
+      position: relative;
+      text-align: center;
+      text-transform: uppercase;
+      color: #7d7d7d;
+  }
+  .progressbar li:before {
+      width: 30px;
+      height: 30px;
+      content: counter(step);
+      counter-increment: step;
+      line-height: 30px;
+      border: 2px solid #7d7d7d;
+      display: block;
+      text-align: center;
+      margin: 0 auto 5px auto;
+      border-radius: 50%;
+      background-color: white;
+  }
+  .progressbar li:after {
+      width: 100%;
+      height: 2px;
+      content: '';
+      position: absolute;
+      background-color: #7d7d7d;
+      top: 15px;
+      left: -50%;
+      z-index: -1;
+  }
+  .progressbar li:first-child:after {
+      content: none;
+  }
+  .progressbar li.active {
+      color: green;
+  }
+  .progressbar li.active:before {
+      border-color: #55b776;
+  }
+  .progressbar li.active + li:after {
+      background-color: #55b776;
+  }
