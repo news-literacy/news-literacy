@@ -29,19 +29,6 @@ window.onclick = function(event) {
   }
 }
 
-$(window).on('load',function(){
-  var url = document.URL;
-  if(url.includes('content'))
-  {
-    document.getElementById("content").style.borderBottom = "2px solid black";
-  }
-  else if(url.includes('sources')){
-    document.getElementById("sources").style.borderBottom = "2px solid black";
-  }
-  else if(url.includes('display')){
-    document.getElementById("display").style.borderBottom = "2px solid black";
-  }
-});
 
 $("#d0").click(function(){
   document.getElementById('d0').style.backgroundColor = "#ee3366";
@@ -66,7 +53,7 @@ $("#next").click(function(){
 });
 
 $(document).ready(function(){
-  if(document.URL.includes('setup')){
+  if(document.URL.includes('home')){
     window.localStorage.clear();
   }
 });
@@ -177,12 +164,10 @@ $(document).ready(function(){  //change content colors, bool, local store
     fillSources();
     checkSources();
     console.log(cur);
-    if (cur == true){
-      curateSources();
-    }
     $("#s0").click(function(){
       if(document.getElementById('s0').style.backgroundColor == 'white'){
            $("#s0").css("background-color", "#ee3366");
+           $('#curate').css({'background-color':'white', 'color': '#ee3366'});
            st = true;
            if(cur == true){
              deCurate(0);
@@ -197,6 +182,7 @@ $(document).ready(function(){  //change content colors, bool, local store
     $("#s1").click(function(){
       if(document.getElementById('s1').style.backgroundColor == 'white'){
            $("#s1").css('background-color', '#ee3366');
+           $('#curate').css({'background-color':'white', 'color': '#ee3366'});
            st = true;
            if(cur == true){
              deCurate(1);
@@ -211,6 +197,7 @@ $(document).ready(function(){  //change content colors, bool, local store
     $("#s2").click(function(){
       if(document.getElementById('s2').style.backgroundColor == 'white'){
            $("#s2").css('background-color', '#ee3366');
+           $('#curate').css({'background-color':'white', 'color': '#ee3366'});
            st = true;
            if(cur == true){
              deCurate(2);
@@ -225,6 +212,7 @@ $(document).ready(function(){  //change content colors, bool, local store
     $("#s3").click(function(){
       if(document.getElementById('s3').style.backgroundColor == 'white'){
            $("#s3").css('background-color', '#ee3366');
+           $('#curate').css({'background-color':'white', 'color': '#ee3366'});
            st = true;
            if(cur == true){
              deCurate(3);
@@ -239,6 +227,7 @@ $(document).ready(function(){  //change content colors, bool, local store
     $("#s4").click(function(){
       if(document.getElementById('s4').style.backgroundColor == 'white'){
            $("#s4").css('background-color', '#ee3366');
+           $('#curate').css({'background-color':'white', 'color': '#ee3366'});
            st = true;
            if(cur == true){
              deCurate(4);
@@ -253,6 +242,7 @@ $(document).ready(function(){  //change content colors, bool, local store
     $("#s5").click(function(){
       if(document.getElementById('s5').style.backgroundColor == 'white'){
            $("#s5").css('background-color', '#ee3366');
+           $('#curate').css({'background-color':'white', 'color': '#ee3366'});
            st = true;
            if(cur == true){
              deCurate(5);
@@ -267,6 +257,7 @@ $(document).ready(function(){  //change content colors, bool, local store
     $("#s6").click(function(){
       if(document.getElementById('s6').style.backgroundColor == 'white'){
            $("#s6").css('background-color', '#ee3366');
+           $('#curate').css({'background-color':'white', 'color': '#ee3366'});
            st = true;
            if(cur == true){
              deCurate(6);
@@ -281,6 +272,7 @@ $(document).ready(function(){  //change content colors, bool, local store
     $("#s7").click(function(){
       if(document.getElementById('s7').style.backgroundColor == 'white'){
            $("#s7").css('background-color', '#ee3366');
+           $('#curate').css({'background-color':'white', 'color': '#ee3366'});
            st = true;
            if(cur == true){
              deCurate(7);
@@ -295,6 +287,7 @@ $(document).ready(function(){  //change content colors, bool, local store
     $("#s8").click(function(){
       if(document.getElementById('s8').style.backgroundColor == 'white'){
            $("#s8").css('background-color', '#ee3366');
+           $('#curate').css({'background-color':'white', 'color': '#ee3366'});
            st = true;
            if(cur == true){
              deCurate(8);
@@ -309,6 +302,7 @@ $(document).ready(function(){  //change content colors, bool, local store
     $("#s9").click(function(){
       if(document.getElementById('s9').style.backgroundColor == 'white'){
            $("#s9").css('background-color', '#ee3366');
+           $('#curate').css({'background-color':'white', 'color': '#ee3366'});
            st = true;
            if(cur == true){
              deCurate(9);
@@ -339,10 +333,9 @@ function fillSources(){
       sources[i] = true;
       scount++;
     }
-    else{
+    else {
       $("#s" + i).css('background-color', 'white');
       sources[i] = false;
-    }
   }
   if (scount == 10){
     curateSources();
@@ -350,12 +343,12 @@ function fillSources(){
   else{
     cur = false;
   }
-}
+}}
 
 
 function checkSources(){
   for (var i = 0; i < 10; i++){
-    if (snow[i] == 'false'){
+    if (window.localStorage.getItem("s"+i) == 'false'){
       cur = false;
     }
   }
@@ -401,5 +394,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  $(".username").html(window.localStorage.getItem("username"));
+  console.log(window.localStorage.getItem("username"));
+  $(".dropbtn").html(window.localStorage.getItem("username"));
+  //$(".dropbtn").html("hello");
 });
