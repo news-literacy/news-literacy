@@ -8,6 +8,12 @@ window.onclick = function(event) {
     }
 }
 */
+
+$(document).ready(function(){
+  if(document.URL.includes('home')){
+    window.localStorage.clear();
+  }
+});
 //enter and exit the sign-in pop-up window
 $(document).ready(function() {
     $("#sign-in").click(function(){

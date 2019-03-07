@@ -34,8 +34,7 @@ $("#d0").click(function(){
   document.getElementById('d0').style.backgroundColor = "#ee3366";
   document.getElementById('d1').style.backgroundColor = "white";
   d0 = true;
-  d1 = false;
-});
+  d1 = false;});
 $("#d1").click(function(){
   document.getElementById('d1').style.backgroundColor = "#ee3366";
   document.getElementById('d0').style.backgroundColor = "white";
@@ -52,14 +51,8 @@ $("#next").click(function(){
   }
 });
 
+//change content colors, bool, local store
 $(document).ready(function(){
-  if(document.URL.includes('home')){
-    window.localStorage.clear();
-  }
-});
-
-
-$(document).ready(function(){  //change content colors, bool, local store
   if(document.URL.includes('content')){
     fillContent(); //set all content to true/false
     checkContent();
@@ -158,8 +151,9 @@ function checkContent(){
   }
 }
 
+//change sources colors, bool, local store
 var st = true;
-$(document).ready(function(){  //change content colors, bool, local store
+$(document).ready(function(){
   if(document.URL.includes('sources')){
     fillSources();
     checkSources();
@@ -323,6 +317,7 @@ $(document).ready(function(){  //change content colors, bool, local store
   }
 });
 
+//fetch data from local to populate choices
 var scount = 0;
 function fillSources(){
   for (var i = 0; i < 10; i++){
@@ -345,7 +340,7 @@ function fillSources(){
   }
 }}
 
-
+//see if any of the sources are selected
 function checkSources(){
   for (var i = 0; i < 10; i++){
     if (window.localStorage.getItem("s"+i) == 'false'){
@@ -354,6 +349,7 @@ function checkSources(){
   }
 }
 
+//"let us curate" button has been selected
 function curateSources(){
   for (var i = 0; i < 10; i++){
     $("#s" + i).css('background-color', 'white');
@@ -363,6 +359,7 @@ function curateSources(){
   cur = true;
 }
 
+//go from all to one source
 function deCurate(num){
   $("#curate").css({'background-color':'white', 'color': '#ee3366'});
   for (var i = 0; i < 10; i++){
@@ -373,6 +370,7 @@ function deCurate(num){
 }
 
 
+//filtering on news article pages
 var cnow = [];
 var snow = [];
 $(document).ready(function(){
@@ -393,8 +391,35 @@ $(document).ready(function(){
   }
 });
 
+//fill in person's added username
 $(document).ready(function(){
   console.log(window.localStorage.getItem("username"));
   $(".dropbtn").html(window.localStorage.getItem("username"));
-  //$(".dropbtn").html("hello");
+});
+
+//change bookmark color and add save class on click
+$(document).ready(function(){
+  $(".bm").click(function(){
+    if($(this).val() == 1){
+      $(this).css("backgroundColor", "white");
+      $(this).val(0);
+      window.localStorage.setItem($(this).parent().attr('id'), 0);
+    }
+    else{
+      $(this).css("backgroundColor","#ee3366" );
+      $(this).val(1);
+      window.localStorage.setItem($(this).parent().attr('id'), 1);
+    }
+  })
+});
+
+//sort through saved articles
+$(document).ready(function(){
+  if(document.URL.includes('saved')){
+    for (var i = 0; i < 50; i++){
+      if (window.localStorage.getItem(i) == 0){
+        $('#'+i).hide();
+      }
+    }
+  }
 });
