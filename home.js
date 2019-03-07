@@ -39,7 +39,11 @@ $(document).ready(function() {
     });
 });
 
-function getUsername(){
-  var un = document.getElementById('NewUsername').value;
-  var nem = window.localStorage.setItem("username", un);
-}
+$(document).ready(function(){
+  if(document.URL.includes('home')){
+    $("#NEWusername").keyup(function(){
+      window.localStorage.setItem("username", this.value);
+      console.log(window.localStorage.getItem("username"));
+    });
+  }
+});
