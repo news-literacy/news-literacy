@@ -10,9 +10,9 @@ window.onclick = function(event) {
 */
 
 $(document).ready(function(){
-  if(document.URL.includes('home')){
+  $("#create").click(function(){
     window.localStorage.clear();
-  }
+  })
 });
 //enter and exit the sign-in pop-up window
 $(document).ready(function() {
@@ -51,5 +51,12 @@ $(document).ready(function(){
       window.localStorage.setItem("username", this.value);
       console.log(window.localStorage.getItem("username"));
     });
+  }
+});
+
+$("#submit-sign").click(function(){
+  var old = document.getElementById('OLDusername').value;
+  if (old != window.localStorage.getItem("username")){
+    alert("Username Not Found");
   }
 });
