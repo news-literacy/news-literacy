@@ -1,6 +1,6 @@
 var content = [0,0,0,0];
 var cont = ["economy", "policy", "elections", "trending"];
-var sources = [false,false,false,false,false,false,false,false,false,false];
+var sources = [true,true,true,true,true,true,true,true,true,true];
 var sces = ["abc", "ap", "cnn", "fox", "npr", "nyt", "pol", "reu", "wp", "wsj"];
 var white = true;
 var myfeed = false;
@@ -157,7 +157,10 @@ $(document).ready(function(){
   if(document.URL.includes('sources')){
     fillSources();
     checkSources();
-    console.log(cur);
+    console.log("curated? " + cur);
+    if (cur == true){
+      curateSources();
+    }
     $("#s0").click(function(){
       if(document.getElementById('s0').style.backgroundColor == 'white'){
            $("#s0").css("background-color", "#ee3366");
@@ -325,18 +328,13 @@ function fillSources(){
     if (ss == 'true' || ss == true){
       $("#s" + i).css('background-color', '#ee3366');
       $('#curate').css({'background-color':'white', 'color': '#ee3366'});
-      sources[i] = true;
       scount++;
     }
     else {
       $("#s" + i).css('background-color', 'white');
-      sources[i] = false;
   }
   if (scount == 10){
     curateSources();
-  }
-  else{
-    cur = false;
   }
 }}
 
@@ -397,6 +395,16 @@ $(document).ready(function(){
   $(".dropbtn").html(window.localStorage.getItem("username"));
 });
 
+//keep colors on bookmarks
+$(document).ready(function(){
+  for (var i = 1; i <= 44; i++){
+    if(window.localStorage.getItem(i) == 1){
+      $('#'+i).find(".bm").css('backgroundColor', '#ee3366');
+      $('#'+i).find(".bm").val(1);
+    }
+  }
+});
+
 //change bookmark color and add save class on click
 $(document).ready(function(){
   $(".bm").click(function(){
@@ -413,11 +421,12 @@ $(document).ready(function(){
   })
 });
 
-//sort through saved articles
+//populate saved articles
 $(document).ready(function(){
   if(document.URL.includes('saved')){
-    for (var i = 0; i < 50; i++){
-      if (window.localStorage.getItem(i) == 0){
+    for (var i = 1; i <= 44; i++){
+      console.log(i + " " + window.localStorage.getItem(i));
+      if (window.localStorage.getItem(i) != 1){
         $('#'+i).hide();
       }
     }
