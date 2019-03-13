@@ -169,7 +169,6 @@ body,html{
 }
 .a-img img{
   width:30%;
-  height:20%;
   margin: 15px;
   text-shadow: 1px 1px black;
   float:right;
@@ -349,6 +348,7 @@ body,html{
 .dropdown {
   float: left;
   overflow: hidden;
+  margin-right: 10%;
 }
 
 /* Dropdown button */
@@ -364,12 +364,13 @@ body,html{
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
+.dropdown:hover .dropbtn {
   background-color: white;
 }
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
+  float: left;
   display: none;
   position: absolute;
   background-color: #f9f9f9;
