@@ -20,7 +20,12 @@
   width:25%;
 }
 
-
+body{
+  font-family: "Merriweather";
+}
+h2{
+  font-family: "Merriweather";
+}
 
 a{
   text-decoration: none;
@@ -141,6 +146,7 @@ li{
   margin-bottom: 20px;
   margin-left: 20px;
 }
+
 
 .headlines{
   padding:5px;

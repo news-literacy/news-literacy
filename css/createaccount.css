@@ -285,7 +285,8 @@ img{
 .progressbar {
       counter-reset: step;
       text-align: center;
-  }
+      font-family: "Roboto";
+      font-weight: bolder;  }
   .progressbar li {
       list-style-type: none;
       width: 25%;
