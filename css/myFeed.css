@@ -1,4 +1,10 @@
 
+body{
+  font-family: "Merriweather";
+}
+h2{
+  font-family: "Merriweather";
+}
 .topbar{
   box-shadow: 0px 1px #e6e7eb;
   background-color: white;
