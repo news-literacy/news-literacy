@@ -133,6 +133,7 @@ body,html{
   width: 55%;
   display: inline-block;
   margin-top: 5px;
+  margin-left: 10px;
   float:left;
 }
 .a-vid iframe{
@@ -299,6 +300,8 @@ body,html{
 
 .titled{
   text-align: center;
+  font-size: 36px;
+  font-family: "Oswald";
 }
 
 .save{
