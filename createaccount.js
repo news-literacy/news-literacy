@@ -29,6 +29,26 @@ window.onclick = function(event) {
   }
 }
 
+//filtering on news article pages
+var cnow = [];
+var snow = [];
+$(document).ready(function(){
+  for (var i = 0; i < 4; i++){
+    cnow[i] = window.localStorage.getItem('c'+i);
+    console.log("c " + cnow[i]);
+    if (cnow[i] != 1){
+      $("." + cont[i]).hide();
+    }
+  }
+
+  for (var j = 0; j < 10; j++){
+    snow[j] = window.localStorage.getItem('s' + j);
+    console.log("s " + snow[j])
+    if (snow[j] != 'true'){
+      $("." + sces[j]).hide();
+    }
+  }
+});
 
 $("#d0").click(function(){
   document.getElementById('d0').style.backgroundColor = "#ee3366";
@@ -143,7 +163,7 @@ function sContent(num){
   allCon = false;
 }
 function checkContent(){
-  if (cnow[0] == 0 && cnow[1] == 0 && cnow[2] == 0 && cnow[3] == 0){
+  if (cnow[0] != 1 && cnow[1] != 1 && cnow[2] != 1 && cnow[3] != 1){
     for (var i = 0; i < 4; i++){
       window.localStorage.setItem('c'+i, 1);
     }
@@ -155,6 +175,7 @@ function checkContent(){
 var st = true;
 $(document).ready(function(){
   if(document.URL.includes('sources')){
+    checkContent();
     fillSources();
     checkSources();
     console.log("curated? " + cur);
@@ -367,27 +388,6 @@ function deCurate(num){
   cur = false;
 }
 
-
-//filtering on news article pages
-var cnow = [];
-var snow = [];
-$(document).ready(function(){
-  for (var i = 0; i < 4; i++){
-    cnow[i] = window.localStorage.getItem('c'+i);
-    console.log("c " + cnow[i]);
-    if (cnow[i] == 0){
-      $("." + cont[i]).hide();
-    }
-  }
-
-  for (var j = 0; j < 10; j++){
-    snow[j] = window.localStorage.getItem('s' + j);
-    console.log("s " + snow[j])
-    if (snow[j] != 'true'){
-      $("." + sces[j]).hide();
-    }
-  }
-});
 
 //fill in person's added username
 $(document).ready(function(){
