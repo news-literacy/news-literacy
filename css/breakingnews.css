@@ -179,8 +179,7 @@ body,html{
   background-color: #34a4b2;
   color: black;
   font-weight: 300;
-  font-family: "Oswald";
-  width:25%;
+  width:20%;
   float:left;
   padding:5px;
   padding-right: 20px;
@@ -207,7 +206,7 @@ li{
 .headlines{
   float:left;
   margin:10px;
-  width:70%;
+  width:75%;
 }
 
 .headlines img{
