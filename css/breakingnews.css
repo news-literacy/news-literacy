@@ -179,6 +179,7 @@ body,html{
   background-color: #34a4b2;
   color: black;
   font-weight: 300;
+  font-family: "Oswald";
   width:25%;
   float:left;
   padding:5px;
@@ -194,7 +195,7 @@ ul{
   list-style-type: disc;
   padding-left:0;
   padding: 5px;
-  font-size: 18px;
+  font-size: 20px;
   color:white;
 }
 
