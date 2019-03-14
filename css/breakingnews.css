@@ -38,11 +38,11 @@ a, a:visited, a:hover, a:active {
   color: inherit;
 }
 
-.article a{
+.article-box a{
   color: #34a4b2;
 }
 
-.article a:hover{
+.article-box a:hover{
   color: black;
 }
 
@@ -91,12 +91,76 @@ body,html{
   margin-top: 45px;
 }
 
-.article{
+.article-box{
   margin-right: 30px;
   padding-top: 30px;
   margin-left: 30px;
   background-color: white;
   padding-bottom: 10px;
+}
+
+.a-img a, .article a{
+  font-size: 24px;
+}
+
+.a-img a:hover, .article a:hover{
+  font-size: 24px;
+  color:black;
+}
+
+.a-img{
+  width: 92%;
+  display:inline-block;
+  word-wrap: break-word;
+  margin:10px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  padding-left: 12px;
+  border-bottom: 1px solid #e6e7eb;
+}
+.a-img p{
+  width: 60%;
+  display: inline-block;
+  margin-top: 5px;
+  float:left;
+}
+.a-img a{
+  color: #34a4b2;
+  font-weight: 100;
+  font-family: "Oswald";
+  display: inline-block;
+  width:100%
+}
+.a-img img{
+  width:30%;
+  margin: 15px;
+  text-shadow: 1px 1px black;
+  float:right;
+}
+
+.article{
+  width: 92%;
+  display:inline-block;
+  word-wrap: break-word;
+  margin:10px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  padding-left:12px;
+  border-bottom: 1px solid #e6e7eb;
+}
+
+.article a{
+  color: #34a4b2;
+  font-weight: 100;
+  font-family: "Oswald";
+  display: inline-block;
+  width:100%
+}
+
+.article p{
+  width: 68%;
+  display: inline-block;
+  margin-top: 5px;
 }
 
 .floatbox{
@@ -126,7 +190,6 @@ body,html{
 
 .summary img{
   width:30%;
-  height:10%
 }
 
 ul{
@@ -152,7 +215,6 @@ li{
 
 .headlines img{
   width:30%;
-  height:15%;
   margin-top:5px;
 }
 
@@ -204,6 +266,26 @@ li{
   margin-bottom: 15px;
   padding-top:15px;
   border-top: 1px solid #e6e7eb;
+}
+
+.bm{
+  float:right;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 25px;
+}
+
+.bm:focus{
+  text-decoration: none;
+  outline: none;
+}
+
+.bm:active{
+  background-color: #ee0290;
+}
+
+.bm:hover{
+  background-color: #ee0290;
 }
 
 .userdrop{

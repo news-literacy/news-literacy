@@ -5,7 +5,7 @@
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Droid+Serif" />
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body>
@@ -42,7 +42,7 @@
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
   <div class="breakingnews">
-    <div class="article">
+    <div class="article-box">
       <a class="br-title" href="polar-vortex.html"> Polar Vortex </a>
       <div class="floatbox">
         <div class="summary">
@@ -52,22 +52,27 @@
           </ul>
         </div>
         <div class="headlines">
-          <a href="https://www.bbc.com/news/world-us-canada-47088684" target="_blank">
-            Polar vortex death roll rises to 21 as US cold snap continues | BBC News </a>
-          <p> At least 21 people have died in one of the worst cold snaps to hit the US Midwest in decades.</p>
-          <br>
-          <a href="https://www.nytimes.com/2019/02/01/us/cold-weather-polar-vortex.html" target="_blank">
-              Midwest Weather Whiplash: From Deep Freeze to Melt, Brining New Risks | NY Times </a>
-          <div id="pv2">
-            <p>CHICAGO - The bitter cold lifted in the Midwest on Friday, ending days of dangerously low temperatures and allowing a region that had all but vanished into hibernation to re-emerge. </p>
-            <img src="https://static01.nyt.com/images/2019/02/02/us/02coldwhiplash01/02coldwhiplash01-jumbo.jpg?quality=90&auto=webp"
-            alt="A bitterly cold Detroit on Thursday. The Midwest is warming up after several days of extreme cold | Emily Rose Bennet/NYT">
+          <div class="a-img wsj" id='50'>
+            <button class="bm"><i class="material-icons">bookmark_border</i></button>
+            <a href="https://www.bbc.com/news/world-us-canada-47088684" target="_blank">
+              Polar vortex death roll rises to 21 as US cold snap continues | BBC News </a>
+            <p> At least 21 people have died in one of the worst cold snaps to hit the US Midwest in decades.</p>
+          </div>
+
+          <div class = "a-img nyt" id='31'>
+            <button class="bm"><i class="material-icons">bookmark_border</i></button>
+            <a href="https://www.nytimes.com/2019/02/01/us/cold-weather-polar-vortex.html" target="_blank">
+              Midwest Weather Whiplash: From Deep Freeze to Melt, Bringing New Risks | NY Times</a>
+              <p>CHICAGO - The bitter cold lifted in the Midwest on Friday, ending days of dangerously
+              low temperatures and allowing a region that had all but vanished into hibernation to re-emerge.</p>
+              <img src="https://static01.nyt.com/images/2019/02/02/us/02coldwhiplash01/02coldwhiplash01-jumbo.jpg?quality=90&auto=webp"
+              alt="A bitterly cold Detroit on Thursday. The Midwest is warming up after several days of extreme cold | Emily Rose Bennet/NYT">
           </div>
         </div>
       </div>
     </div>
 
-    <div class="article">
+    <div class="article-box">
       <a class="br-title" href="ny-abortion.html"> New York Abortion Bill </a>
       <div class="floatbox">
         <div class="summary">
@@ -77,23 +82,29 @@
           </ul>
         </div>
         <div class="headlines">
+          <div class="article cbs" id='61'>
+          <button class="bm"><i class="material-icons">bookmark_border</i></button>
           <a href="https://www.cbsnews.com/news/new-york-passes-abortion-bill-late-term-if-mothers-health-is-at-risk-today-2019-01-23/" target="_blank">
                  New York passes law allowing abortions at any time if mother's health is at risk | CBS</a>
           <p> New York's new abortion law allows for abortion after 24 hours of pregnancy int he case of the mother's heath being threatened
           or in the case of a fetus that is not viable.</p>
-          <br>
-          <a href="https://www.nytimes.com/2019/01/07/nyregion/cuomo-abortion-roe-vs-wade.html" target = "_blank">
-                  As Supreme Course Shifts Under Trump, Cuomo Vows to Expand Abortion Rights | NY Times</a>
-          <p>With Hillary Clinton to his right, female elected officials seated before him and cheering women filling the audience, Gov.
-            Andrew M. Cuomo on Monday promised to protect women’s reproductive rights by expanding the state’s abortion laws within the first
-            30 days of the new legislative session.</p>
-          <img src="https://static01.nyt.com/images/2019/01/08/nyregion/08nyabortion/08nyabortion-jumbo.jpg?quality=90&auto=webp"
-          alt="Andrew Cuomo accompanied by Hillary Clnton | Chang W. Lee/The New York Times">
+        </div>
+
+        <div class="a-img nyt" id='17'>
+          <button class="bm"><i class="material-icons">bookmark_border</i></button>
+             <a href="https://www.nytimes.com/2019/01/07/nyregion/cuomo-abortion-roe-vs-wade.html" target = "_blank">
+              As Supreme Course Shifts Under Trump, Cuomo Vows to Expand Abortion Rights | NY Times</a>
+              <p>With Hillary Clinton to his right, female elected officials seated before him and cheering women filling the audience, Gov.
+              Andrew M. Cuomo on Monday promised to protect women’s reproductive rights by expanding the state’s abortion laws within the first
+               30 days of the new legislative session.</p>
+               <img src="https://static01.nyt.com/images/2019/01/08/nyregion/08nyabortion/08nyabortion-jumbo.jpg?quality=90&auto=webp"
+               alt="Andrew Cuomo accompanied by Hillary Clnton | Chang W. Lee/The New York Times">
+        </div>
         </div>
       </div>
     </div>
 
-    <div class="article">
+    <div class="article-box">
       <a class="br-title" href="government-shutdown.html"> Government Shutdown </a>
       <div class="floatbox">
         <div class="summary">
@@ -103,24 +114,30 @@
           </ul>
         </div>
         <div class="headlines">
-          <a href="https://www.cnn.com/2019/02/14/politics/house-vote-shutdown-deal-congress/index.html" target="_blank">
-          House and Senate approve deal to avert shutdown, sending measure to White House | CNN</a>
-          <p>With little more than a day left before funding expires for key parts of the government, the House and Senate
-           both voted on Thursday to approve a spending deal to avert a shutdown, sending the legislation to the White
-            House for President Donald Trump's signature.</p>
-          <br>
-          <a href="https://www.politico.com/story/2019/02/11/shutdown-congress-border-security-1163824" target="_blank">
-          Negotiators reach deal ‘in principle’ to avert shutdown | Politico</a>
-          <p>Congressional negotiators announced an "agreement in principle" Monday night on a broad spending bill
-          they hope will satisfy President Donald Trump's demands for additional border barriers and avert another
-          government shutdown at the end of this week.</p>
-        <img src="https://static.politico.com/dims4/default/6a9a0a1/2147483647/resize/1160x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F25%2F1f%2F5a3143e34efe9bcc3a58ea9296b2%2F190211-shelby-gty-773.jpg"
-          alt="Senate Appropriations Committee Chairman Richard Shelby | Mark Wilson/Getty Images">
+          <div class="article cnn" id='22'>
+            <button class="bm"><i class="material-icons">bookmark_border</i></button>
+            <a href="https://www.cnn.com/2019/02/14/politics/house-vote-shutdown-deal-congress/index.html" target="_blank">
+              House and Senate approve deal to avert shutdown, sending measure to White House | CNN</a>
+            <p>With little more than a day left before funding expires for key parts of the government, the House and Senate
+             both voted on Thursday to approve a spending deal to avert a shutdown, sending the legislation to the White
+              House for President Donald Trump's signature.</p>
+          </div>
+
+          <div class="a-img pol" id='18'>
+            <button class="bm"><i class="material-icons">bookmark_border</i></button>
+              <a href="https://www.politico.com/story/2019/02/11/shutdown-congress-border-security-1163824" target="_blank">
+                Negotiators reach deal ‘in principle’ to avert shutdown | Politico</a>
+                <p>Congressional negotiators announced an "agreement in principle" Monday night on a broad spending bill
+                they hope will satisfy President Donald Trump's demands for additional border barriers and avert another
+                government shutdown at the end of this week.</p>
+              <img src="https://static.politico.com/dims4/default/6a9a0a1/2147483647/resize/1160x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F25%2F1f%2F5a3143e34efe9bcc3a58ea9296b2%2F190211-shelby-gty-773.jpg"
+            alt="Senate Appropriations Committee Chairman Richard Shelby | Mark Wilson/Getty Images">
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="article">
+    <div class="article-box">
       <a class="br-title" href="michael-cohen.html"> Michael Cohen </a>
       <div class="floatbox">
         <div class="summary">
@@ -130,17 +147,23 @@
           </ul>
         </div>
         <div class="headlines">
-          <a href="https://www.wsj.com/articles/ex-trump-lawyer-michael-cohen-to-testify-at-open-house-hearing-feb-27-11550707784" target="_blank">
-          Ex-Trump Lawyer Michael Cohen to Testify at Open House Hearing Feb. 27 | Wall Street Journal</a>
-          <div id="pv2"><p> WASHINGTON—Michael Cohen, a former lawyer for President Trump, has agreed to testify publicly before the House Oversight Committee on Feb. 27,
-          in what is expected to be an explosive hearing focused on his decade of working for the president.</p>
-          <br>
-          <a href="https://www.cnn.com/2019/02/20/politics/michael-cohen-jail/index.html" target="_blank">
-          Michael Cohen won't have to report to prison until May, judge rules | CNN</a>
-          <p>A federal judge agreed Wednesday to a two-month delay to the date by which President Donald Trump's former personal
-          attorney, Michael Cohen, must report to prison.</p>
-          <img src="https://images.wsj.net/im-54891?width=1260&aspect_ratio=1.5"
-          alt="Michael Cohen arrives at federal court in New York in December, where he was sentenced to three years in prison | Peter Foley/Bloomberg"></div>
+          <div class="a-img wsj" id='32'>
+            <button class="bm"><i class="material-icons">bookmark_border</i></button>
+            <a href="https://www.wsj.com/articles/ex-trump-lawyer-michael-cohen-to-testify-at-open-house-hearing-feb-27-11550707784" target="_blank">
+              Ex-Trump Lawyer Michael Cohen to Testify at Open House Hearing Feb. 27 | Wall Street Journal</a>
+              <p> WASHINGTON—Michael Cohen, a former lawyer for President Trump, has agreed to testify publicly before the House Oversight Committee on Feb. 27,
+               in what is expected to be an explosive hearing focused on his decade of working for the president.</p>
+               <img src="https://images.wsj.net/im-54891?width=1260&aspect_ratio=1.5"
+             alt="Michael Cohen arrives at federal court in New York in December, where he was sentenced to three years in prison | Peter Foley/Bloomberg">
+          </div>
+
+          <div class="article cnn" id='36'>
+            <button class="bm"><i class="material-icons">bookmark_border</i></button>
+            <a href="https://www.cnn.com/2019/02/20/politics/michael-cohen-jail/index.html" target="_blank">
+              Michael Cohen won't have to report to prison until May, judge rules | CNN</a>
+              <p>A federal judge agreed Wednesday to a two-month delay to the date by which President Donald Trump's former personal
+              attorney, Michael Cohen, must report to prison.</p>
+          </div>
         </div>
       </div>
     </div>

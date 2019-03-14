@@ -397,7 +397,7 @@ $(document).ready(function(){
 
 //keep colors on bookmarks
 $(document).ready(function(){
-  for (var i = 1; i <= 44; i++){
+  for (var i = 1; i <= 66; i++){
     if(window.localStorage.getItem(i) == 1){
       $('#'+i).find(".bm").css('backgroundColor', '#ee3366');
       $('#'+i).find(".bm").val(1);
@@ -424,7 +424,7 @@ $(document).ready(function(){
 //populate saved articles
 $(document).ready(function(){
   if(document.URL.includes('saved')){
-    for (var i = 1; i <= 44; i++){
+    for (var i = 1; i <= 66; i++){
       console.log(i + " " + window.localStorage.getItem(i));
       if (window.localStorage.getItem(i) != 1){
         $('#'+i).hide();
