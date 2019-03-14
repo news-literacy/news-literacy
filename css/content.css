@@ -20,17 +20,7 @@
   width:25%;
 }
 
-.username{
-  background-color: none;
-  color:#ee0290;
-  height:40px;
-  font-family: "Oswald";
-  font-size:18px;
-  padding: 20px;
-  vertical-align: right;
-  margin-right: 10px;
-  float:right;
-}
+
 
 a{
   text-decoration: none;
@@ -44,10 +34,16 @@ a:visited {
   text-decoration: none;
 }
 
-
-
 a, a:visited, a:hover, a:active {
   color: inherit;
+}
+
+.article-box a{
+  color: #34a4b2;
+}
+
+.article-box a:hover{
+  color: black;
 }
 
 body,html{
@@ -90,17 +86,81 @@ body,html{
 
 .breakingnews{
   display: inline-block;
-  width: 76%;
+  width: 90%;
   float: left;
   margin-top: 45px;
 }
 
-.article{
+.article-box{
   margin-right: 30px;
   padding-top: 30px;
   margin-left: 30px;
   background-color: white;
   padding-bottom: 10px;
+}
+
+.a-img a, .article a{
+  font-size: 24px;
+}
+
+.a-img a:hover, .article a:hover{
+  font-size: 24px;
+  color:black;
+}
+
+.a-img{
+  width: 100%;
+  display:inline-block;
+  word-wrap: break-word;
+  margin:10px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  padding-left: 12px;
+  border-bottom: 1px solid #e6e7eb;
+}
+.a-img p{
+  width: 60%;
+  display: inline-block;
+  margin-top: 5px;
+  float:left;
+}
+.a-img a{
+  color: #34a4b2;
+  font-weight: 100;
+  font-family: "Oswald";
+  display: inline-block;
+  width:100%
+}
+.a-img img{
+  width:30%;
+  margin: 15px;
+  text-shadow: 1px 1px black;
+  float:right;
+}
+
+.article{
+  width: 100%;
+  display:inline-block;
+  word-wrap: break-word;
+  margin:10px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  padding-left:12px;
+  border-bottom: 1px solid #e6e7eb;
+}
+
+.article a{
+  color: #34a4b2;
+  font-weight: 100;
+  font-family: "Oswald";
+  display: inline-block;
+  width:100%
+}
+
+.article p{
+  width: 80%;
+  display: inline-block;
+  margin-top: 5px;
 }
 
 .floatbox{
@@ -130,7 +190,6 @@ body,html{
 
 .summary img{
   width:30%;
-  height:10%
 }
 
 ul{
@@ -147,16 +206,13 @@ li{
 }
 
 .headlines{
-  padding:5px;
-  padding-left: 30px;
-  float:right;
+  float:left;
   margin:10px;
-  width:70%;
+  width:75%;
 }
 
 .headlines img{
   width:30%;
-  height:15%;
   margin-top:5px;
 }
 
@@ -166,40 +222,42 @@ li{
 
 .headlines a{
   color: black;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 100;
   font-family: "Oswald";
   display: inline-block;
   width:100%
 }
 
-
-.tweet-block{
+.headlines a:hover{
+  color: #34a4b2;
+  font-size: 22px;
+  font-weight: 100;
+  font-family: "Oswald";
   display: inline-block;
-  width:23%;
-  height: auto;
-  float: right;
-  margin-right: 10px;
-  margin-top: 50px;
+  width:100%
 }
 
-#YT-title{
-  display:inline-block;
-  width: 22%;
-  height: 25px;
-  float: right;
-  margin-right: 15px;
-  font-family: Arial;
-  font-size: 20px;
+.bm{
+  margin: 10px;
+  float:right;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 25px;
 }
-.YTVid{
-  display: inline-block;
-  width: 23%;
-  float: right;
-  margin-right:5px;
-  margin-bottom: 15px;
-  padding-top:15px;
-  border-top: 1px solid #e6e7eb;
+
+.bm:focus{
+  text-decoration: none;
+  outline: none;
+}
+
+.bm:active{
+  background-color: #ee0290;
+}
+
+
+.bm:hover{
+  background-color: #ee0290;
 }
 
 .userdrop{
@@ -239,14 +297,15 @@ li{
   margin: 0; /* Important for vertical align on mobile phones */
 }
 
-.dropdown:hover .dropbtn {
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
   background-color: white;
 }
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
-  display: inline-block;
-  float:left;
+  display: none;
+  position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -255,7 +314,7 @@ li{
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  float: left;
+  float: none;
   color: black;
   padding: 12px 16px;
   text-decoration: none;
@@ -271,4 +330,8 @@ li{
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.in{
+  display: inline-block;
 }
