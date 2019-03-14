@@ -429,6 +429,9 @@ $(document).ready(function(){
       if (window.localStorage.getItem(i) != 1){
         $('#'+i).hide();
       }
+      else{
+        $('#'+i).show();
+      }
     }
   }
 });
